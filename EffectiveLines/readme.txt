@@ -1,0 +1,3 @@
+com.qunar.effectivelines.EffectiveLines为主函数所在类
+
+根据空行和注释两种情况使用JudgementInterface接口派生出两个类，存在com.qunar.effectivelines.strategy包下
