@@ -1,0 +1,12 @@
+#获取该域名的IP信息
+host I-test.dev.cn1
+
+#利用正则表达式筛选ip信息行
+#NOTE: 花扩号在linux的正则表达式里需要转义
+grep '.*([0-9]\{1,3\}\.)\{1,3\}[0-9]\{1,3\}$'
+
+#行内截取具体IP
+gawk '{print $4}'
+
+#利用scp命令完成copy
+scp /dir/test.file user@$IP:/tmp/test.file
