@@ -43,6 +43,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.woodstox:woodstox-core:5.0.2" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.4" />
           <element id="library" level="project" name="Maven: net.sourceforge.jchardet:jchardet:1.0" />
+          <element id="library" level="project" name="Maven: org.json:json:20160810" />
         </element>
       </element>
     </root>

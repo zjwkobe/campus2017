@@ -43,7 +43,7 @@
             <div id="fname"></div>
           </td>
           <td>
-            <button class='btn btn-info pull-right statistics'> 统 计</button>
+            <button id="fs" class='btn btn-info pull-right'> 统 计</button>
           </td>
         </tr>
       </table>
@@ -56,7 +56,7 @@
             <table class='table'>
               <tr>
                 <td align='center'>
-                  <button class='btn btn-info statistics'> 统 计</button>
+                  <button id="ts" class='btn btn-info'> 统 计</button>
                 </td>
               </tr>
               <tr>
@@ -83,19 +83,19 @@
         </tr>
         <tr>
           <td align="center">英文字母</td>
-          <td id="e_num"></td>
+          <td align="center" id="e_num"></td>
         </tr>
         <tr>
           <td align="center">数字</td>
-          <td id="n_num"></td>
+          <td align="center" id="n_num"></td>
         </tr>
         <tr>
           <td align="center">中文汉字</td>
-          <td id="c_num"></td>
+          <td align="center" id="c_num"></td>
         </tr>
         <tr>
           <td align="center">中英文标点符号</td>
-          <td id="d_num"></td>
+          <td align="center" id="d_num"></td>
         </tr>
       </table>
 
@@ -115,29 +115,30 @@
     // swf文件路径
     swf: BASE_URL + '/js/Uploader.swf',
     // 文件接收服务端。
-    server: '/upload',
+    server: '/uploadFile',
     // 选择文件的按钮。可选。
     // 内部根据当前运行是创建，可能是input元素，也可能是flash.
     pick: '#upload',
     // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
     resize: false
-    // auto: true
   });
 
   function set_max_num(data) {
     var max_num_html = "<tr><td align=\"center\" width=\"50%\">名称</td><td align=\"center\">个数</td></tr>";
+    var chars = data.chars;
+    var cnums = data.cnums;
     var i;
     for (i = 0; i !== 3; ++i)
       max_num_html = max_num_html.concat(
-          "<tr><td>" + data[i][0] + "</td><td>" + data[i][1] + "</td></tr>");
+          "<tr><td align=\"center\">" + chars[i] + "</td><td align=\"center\">" + cnums[i] + "</td></tr>");
     $('#max_num').html(max_num_html);
   }
 
   function set_num(data) {
-    $('#e_num').val(data[0]);
-    $('#n_num').val(data[1]);
-    $('#c_num').val(data[2]);
-    $('#d_num').val(data[3]);
+    $('#e_num').html(data[0]);
+    $('#n_num').html(data[1]);
+    $('#c_num').html(data[2]);
+    $('#d_num').html(data[3]);
   }
 
   function clean() {
@@ -147,18 +148,6 @@
     $('#fname').html('');
   }
 
-  function statistics(id) {
-    if ($('#_file').is(':checked')) {
-      console.log('is file');
-    } else {
-      console.log('is other');
-    }
-    return function () {
-      uploader.upload();
-      $(id).show();
-    };
-  }
-
   $(function () {
     uploader.on('fileQueued', function (file) {
       $('#fname').html(file.name);
@@ -166,7 +155,10 @@
     });
 
     uploader.on('uploadSuccess', function (file, response) {
-      console.log('s = ' + JSON.stringify(response))
+      console.log('s = ' + JSON.stringify(response));
+      set_num(response.nums);
+      set_max_num(response);
+      $('#the_end').show();
     });
 
     uploader.on('uploadError', function (file) {
@@ -174,7 +166,6 @@
     });
 
     uploader.on('uploadComplete', function (file) {
-      console.log('jjjjj ' + file);
     });
 
     $("#change1").show();
@@ -190,7 +181,20 @@
       $('#change1').hide();
     });
 
-    $('.statistics').click(statistics('the_end'));
+    $('#fs').click(function () {
+      uploader.upload();
+    });
+
+    $('#ts').click(function () {
+      $.ajaxSetup({
+        contentType : 'application/json'
+      });
+      $.post('/uploadStr', JSON.stringify($('#text').val()), function (response) {
+        set_num(response.nums);
+        set_max_num(response);
+        $('#the_end').show();
+      });
+    });
 
     $('#reset').click(function () {
       $('#text').val('');

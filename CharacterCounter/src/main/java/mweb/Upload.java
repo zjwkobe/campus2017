@@ -1,25 +1,30 @@
 package mweb;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
+import java.nio.charset.Charset;
 
 @RestController
 public class Upload {
-  @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = "application/json")
-  public List<String> upload(MultipartFile file) {
+  @RequestMapping(value = "/uploadFile", method = RequestMethod.POST, produces = "application/json")
+  public Count upload(MultipartFile file) {
     try {
-      Tools.getCharsets(file.getBytes());
-      String str = new String(file.getBytes());
+      byte[] bytes = file.getBytes();
+      Charset set = Tools.getCharsets(bytes);
+      return Tools.getCount(new String(bytes, set));
     } catch (IOException e) {
       e.printStackTrace();
       throw new RuntimeException(e);
     }
-    return Arrays.asList("abc", "dad", "ccc");
+  }
+
+  @RequestMapping(value = "/uploadStr", method = RequestMethod.POST, produces = "application/json")
+  public Count upload(@RequestBody String json) {
+    return Tools.getCount(json);
   }
 }
