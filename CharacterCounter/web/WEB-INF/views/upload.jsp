@@ -10,12 +10,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <title>页面示例</title>
-  <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="static/css/style.css"/>
-  <link rel="stylesheet" href="static/css/webuploader.css"/>
-  <script src="static/js/jquery-1.12.3.min.js" type="text/javascript"></script>
-  <script src="static/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="static/js/webuploader.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/webuploader.css"/>
+  <script src="js/jquery-1.12.3.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/webuploader.min.js" type="text/javascript"></script>
 </head>
 
 <body>

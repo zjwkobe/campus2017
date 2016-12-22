@@ -105,9 +105,4 @@ public class Tools {
         mid = partition(array, 0, mid - 2);
     }
   }
-
-  public static void main(String[] args) {
-    String test = "大荥王朝的裕王爷伏fffffag在观刑fa台临时搭da建的台阶上放声大笑，状若癫狂";
-    System.out.println(getCount(test));
-  }
 }
