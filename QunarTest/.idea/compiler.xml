@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -22,13 +23,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="CharacterCounter" />
         <module name="ExchangeRate" />
         <module name="ExchangeRate1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ExchangeRate" target="1.5" />
-      <module name="ExchangeRate1" target="1.5" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="CountMostImport" target="1.7" />
+      <module name="EffectiveLines" target="1.7" />
+      <module name="ExchangeRate" target="1.7" />
+      <module name="QunarTest" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
