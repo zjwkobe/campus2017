@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#统计tomcat访问历史中访问次数最多的10个IP
+cut -d ' ' -f1 /opt/tomcat7/logs/localhost_access_log.2016* | uniq -c | sort -k1,1nr -u | head -n 10

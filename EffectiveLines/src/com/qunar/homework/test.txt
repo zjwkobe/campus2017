@@ -1,0 +1,59 @@
+package com.qunar.homework;
+
+import com.google.common.base.Optional;
+import com.google.common.util.concurrent.ExecutionError;
+
+import java.io.*;
+import java.util.concurrent.ExecutionException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Created by joe on 2016/11/11.
+ * 统计java代码的有效行数，
+ */
+public class EffectiveLines {
+    public static void main(String[] args) {
+
+        InputStream inputStream = EffectiveLines.class.getResourceAsStream("test.txt");
+        Optional<Integer> optional = count(inputStream);
+
+        if (optional.isPresent()) {
+            System.out.println("有效行" + optional.get());
+        } else {
+            System.out.println("读取文件出错！");
+        }
+
+
+    }
+
+    /**
+     * 输入java文件
+     *
+     * @param f
+     * @return java文件字符String，每行手动添加'\n'
+     * @throws IOException
+     */
+    public static Optional<Integer> count(InputStream in) {
+        int effectiveLines = 0;
+        try {
+            StringBuffer code = new StringBuffer();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+            String buffer = null;
+            while ((buffer = reader.readLine()) != null) {
+                buffer = buffer.trim();
+                if (buffer.startsWith("//") || buffer.startsWith("/*") && buffer.endsWith("*/")) {
+                    effectiveLines++;
+                }
+            }
+        } catch (Exception e) {
+            return Optional.absent();
+        } finally {
+
+//
+
+        }
+        //asd
+        return Optional.of(effectiveLines);
+    }
+}
