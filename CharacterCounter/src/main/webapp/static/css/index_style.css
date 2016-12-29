@@ -1,0 +1,42 @@
+#container{width:600px; margin-right:auto; margin-left:auto}
+#tab_panel{width:520px; height: 100px; margin-right:auto; margin-left:auto}
+#main{width:520px; margin-right:auto; margin-left:auto}
+.btn{background: deepskyblue ;border: none;color: white;font-size:small;width: 85px;height: 30px;display: block;text-align: center}
+.btn1{background: orange ;border: none;color: white;font-size:small;width: 85px;height: 30px}
+.file {
+    position: relative;
+    background:deepskyblue;
+    border:none;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    text-indent: 0;
+    font-size: small;
+    line-height: 30px;
+}
+.file input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background:deepskyblue;
+    border:none;
+    color: white;
+    text-decoration: none;
+}
+.data_table{
+    width:380px;
+    border-collapse:collapse;
+    table-layout: fixed;
+    text-align: center
+}
+.data_table th{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.data_table td{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
