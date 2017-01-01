@@ -1,0 +1,483 @@
+
+/*header*/
+  .ui-header {
+    font-family: "微软雅黑";
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .ui-header-wrap {
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+  }
+  .ui-header-wrap .header-nav li {
+    float: left;
+    padding: 0 15px;
+  }
+  .ui-header-wrap .header-info a {
+    padding: 0 15px;
+  }
+  .ui-header-wrap .after-line {
+    border-right: 1px solid #000;
+  }
+  .ui-header-wrap .logo {
+    padding-top: 20px;
+  }
+
+/*banner*/
+  .ui-banner {
+    width: 100%;
+    position: relative;
+  }
+  .ui-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .ui-banner-step {
+    width: 944px;
+    height: 180px;
+    position: absolute;
+    left: 50%;
+    margin-left: -490px;
+    bottom: 23px;
+  }
+  .ui-banner-step a {
+    display: block;
+    float: left;
+    width: 327px;
+    height: 180px;
+    background-size: 100% 100%;
+  }
+  .ui-banner-step a:first-child {
+    background-image: url('images/banner-step1.png');
+  }
+  .ui-banner-step a:nth-child(2) {
+
+    margin-left: -14px;
+    background-image: url('images/banner-step2.png');
+  }
+  .ui-banner-step a:nth-child(3) {
+    margin-left: -23px;
+    background-image: url('images/banner-step3.png');
+  }
+
+/*ui-content*/
+  .ui-content {
+    background-color: #7ecef4;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  .ui-code {
+    position: absolute;
+    width: 145px;
+    padding: 10px;
+    top: 200px;
+    left: 20px;
+    background: #ed5172;
+    border-bottom: 5px solid #9d0035;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+  }
+  .ui-code .content {
+    width: 145px;
+    height: 145px;
+    background: #fff;
+    margin-top: 15px;
+  }
+  .ui-return-nav {
+    position: absolute;
+    width: 215px;
+    top: 200px;
+    right: 20px;
+    background-image: url(images/return-nav.png);
+    background-size: 100% 100%;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+
+  }
+  .ui-return-nav ul {
+    padding-top: 105px;
+    padding-bottom: 20px;
+  }
+  .ui-return-nav li {
+    margin: 5px auto;
+    width: 80px;
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .ui-return-nav li a {
+    display: block;
+    padding: 8px 16px;
+    color: #fff;
+  }
+  .ui-return-nav li a:hover {
+    background: #a7de55;
+    color: #000;
+  }
+  .ui-return-nav .to-top {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+  }
+  .ui-activities {
+      padding: 10px;
+      width: 962px;
+      margin: 0 auto 30px;
+      background: #78af24;
+  }
+  .ui-activities .activity {
+    float: left;
+    width: 503px;
+    height: 250px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background-repeat: no-repeat;
+  }
+  .ui-activities .activity:nth-child(1) {
+    background-image: url(images/activityA.png);
+  }
+  .ui-activities .activity:nth-child(2) {
+    margin-left: -44px;
+    background-image: url(images/activityB.png);
+  }
+  .ui-activities .activity .desc {
+    width: 100%;
+    height: 96px;
+    line-height: 32px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+  }
+  .ui-activities .activity .button {
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 auto;
+    color: #fff;
+    background: #959595;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .ui-activities .activity .button:hover {
+    background: #a7de55;
+  }
+  .ui-activities .activity .button:active {
+    background: #78af24;
+  }
+/*ui-district*/
+  .ui-district {
+    height: 128px;
+    position: relative;
+    background-image: url(images/district-bg.png);
+    background-size: 100% 100%;
+    color: #fff;
+    padding: 0 28px;
+    font-family: "黑体";
+  }
+  .ui-district .line {
+    position: absolute;
+    height: 1px;
+    background: #fff;
+    left: 69px;
+    right: 69px;
+    top: 58px;
+    z-index: 2;
+  }
+  .ui-district .district-item {
+    width: 84px;
+    height: 131px;
+    position: relative;
+    margin-top: -3px;
+    text-align: center;
+    float: left;
+    background-size: 100% 100%;
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-district .district-item:hover, .ui-district .district-item:focus, .ui-district .active{
+    background-image: url(images/district-hover.png);
+  }
+  .ui-district .district-item:hover span, .ui-district .district-item:focus span, .ui-district .active span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .ui-district .district-item:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -4px;
+    margin-top: -8px;
+  }
+  .ui-district .district-item:hover:after, .ui-district .district-item:focus:after, .ui-district .active:after {
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    margin-top: -10px;
+  }
+  .ui-district .district-item span {
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  .ui-district .even span {
+    top: 32px;
+  }
+  .ui-district .odd span {
+    bottom: 36px;
+  }
+
+
+/*products*/
+  .ui-products-container {
+    margin-top: -5px;
+    padding: 5px 20px;
+    background: #f3eedb;
+    font-family: "黑体";
+  }
+  .ui-products-container .products-title {
+    padding: 25px 5px 25px 20px;
+    color: #ed5172;
+  }
+
+  .ui-products-container .products-title h2 {
+    font-size: 42px;
+    line-height: 49px;
+  }
+  .ui-products-container .products-title span:before {
+    content: '';
+    float: left;
+    width: 1px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -18px;
+    background: #ed5172;
+  }
+  .ui-products-container .products-title span {
+    margin-top: 25px;
+  }
+  .ui-products-container .products-title .more {
+    padding-top: 25px;
+  }
+  .ui-products-container .products-title a {
+    color: #ed5172;
+  }
+  .ui-products-list .product {
+    margin: 5px;
+    padding: 10px;
+    height: 308px;
+    background: #fff;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  .ui-products-list .product .inner {
+    height: 100%;
+    position: relative;
+    background-size: 100% 100%;
+  }
+  .ui-products-list .product-tip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 8px;
+    background: rgba(0, 0, 0, .7);
+  }
+  .ui-products-list .product-recommend .inner {
+    width: 100%;
+    background-image: url(images/pro-recommend.png);
+  }
+  .ui-products-list .product-common {
+    width: 461px;
+    float: left;
+  }
+  .ui-products-list .product-common .inner {
+    background-image: url(images/pro-common.png);
+  }
+  .ui-products-list .product-desc {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    padding: 0 20px;
+  }
+  .ui-products-list .product-recommend .product-desc {
+    width: 240px;
+    top: 0;
+  }
+  .ui-products-list .product-common .product-desc {
+    left: 0;
+    height: 102px;
+  }
+  .ui-products-list .product-common .product-desc .title {
+    width: 250px;
+    white-space: nowrap;
+  }
+  .ui-products-list .product-common .product-desc .title h3 {
+    margin-top: 15px;
+  }
+  .ui-products-list .product-recommend .product-desc .title h3 {
+    margin-top: 30px;
+  }
+  .ui-products-list .product-common .product-desc .title p {
+    margin-top: 10px;
+  }
+  .ui-products-list .product-recommend .product-desc .title p {
+    margin-top: 20px;
+  }
+  .ui-products-list .product-common .product-desc .title p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ui-products-list .product-recommend .product-desc .price {
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+  }
+  .ui-products-list .product-common .product-desc .price {
+    font-style: italic;
+  }
+  .ui-products-list .product-common .product-desc .price h3 {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+  .ui-products-list .product-common .product-desc .price p {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+  .ui-products-list .product-common .product-desc .price {
+    width: 250px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+  .ui-products-list .product-common .product-desc .price span {
+    font-size: 30px;
+  }
+  .ui-products-list .product-recommend .product-desc .price span {
+    font-size: 50px;
+  }
+  .ui-products-list .product-desc .price p {
+    color: #bfbfbf;
+    text-decoration: line-through;
+  }
+  .ui-products-list .product-desc .reserve {
+    background: #ed5172;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .ui-products-list .product-desc .reserve:hover {
+    background: #ff92ac;
+  }
+  .ui-products-list .product-recommend .product-desc .reserve {
+    padding: 20px 0;
+    left: 0;
+  }
+  .ui-products-list .product-common .product-desc .reserve {
+    top: 0;
+    right: 0;
+    padding: 0 20px;
+    line-height: 102px;
+  }
+
+/*gift-bar*/
+  .ui-giftbar {
+    margin-top: 40px;
+    height: 169px;
+    background-size: 100% 100%;
+    background-image: url(images/giftbar.png);
+    text-align: center;
+    position: relative;
+  }
+  .ui-giftbar a {
+    position: absolute;
+    bottom: 30px;
+    margin-left: -72px;
+    display: inline-block;
+    padding: 5px 40px;
+    background-color: #78af24;
+    border-radius: 40px;
+    color: #fff;
+    box-shadow: 0 5px 0 0 #336d00;
+  }
+  .ui-giftbar a:hover {
+    background-color: #a7de55;
+  }
+
+/*vote*/
+  .ui-vote {
+    margin-top: 40px;
+    font-family: "黑体";
+    padding-bottom: 40px;
+  }
+  .ui-vote .title {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  .ui-vote .title span {
+    color: #ed5172;
+  }
+  .ui-vote .content {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .ui-vote .content textarea {
+    resize: none;
+    width: 80%;
+    height: 300px;
+    border: 1px solid #918d8d;
+    border-bottom: 0;
+  }
+
+/*footer*/
+  .ui-footer {
+    background: #fff;
+    padding: 20px 0 60px;
+    text-align: center;
+    font-family: "微软雅黑";
+  }
+  .ui-footer .reserve-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .ui-footer .banner-group {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .ui-footer .banner-item {
+    width: 470px;
+    height: 80px;
+    line-height: 80px;
+    background: #ebebeb;
+  }
+
+  .ui-footer .link-list {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .ui-footer .footer-imglist {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .ui-footer .footer-imglist img {
+    display: inline-block;
+  }
