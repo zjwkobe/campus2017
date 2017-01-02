@@ -37,6 +37,26 @@
   .g-fr {
     float: right;
   }
+  .g-gray {
+    color: #9f9f9f;
+  }
+  .g-bg-navy {
+    background-color: #1BA9BA;
+  }
+  .g-bg-red {
+    color: #fff;
+    background-color: #FF0000;
+  }
+  .g-bg-orange {
+    color: #fff;
+    background-color: #ff6600;
+  }
+  .g-navy {
+    color: #1BA9BA;
+  }
+  .g-ored {
+    color: #FF7600;
+  }
   .g-orange {
     color: #ff6600;
   }
