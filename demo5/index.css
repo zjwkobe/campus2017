@@ -1,0 +1,229 @@
+
+  body {
+    font-family: "微软雅黑";
+  }
+/*main*/
+  .ui-main {
+    width: 935px;
+    padding-top: 1px;
+    margin: 200px auto;
+  }
+  .ui-date-list {
+    width: 837px;
+    height: 75px;
+    border-bottom: 1px solid #268fc5;
+    position: relative;
+    float: left;
+  }
+  .ui-date-list .prev,
+  .ui-date-list .next {
+    float: left;
+    width: 48px;
+    height: 75px;
+    top: 1px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    cursor: pointer;
+  }
+  .ui-date-list .prev {
+    background-image: url(images/prev.png);
+  }
+  .ui-date-list .next {
+    background-image: url(images/next.png);
+  }
+  .ui-date-list .list {
+    height: 75px;
+    float: left;
+    font-size: 14px;
+    background: #f3fbfd;
+  }
+  .ui-date-list .list li {
+    float: left;
+    position: relative;
+    width: 103px;
+    height: 100%;
+    line-height: 24px;
+    text-align: center;
+    border-left: 1px solid #7dbcdc;
+    border-right: 1px solid #7dbcdc;
+    border-bottom: 1px solid transparent;
+    margin-left: -1px;
+    margin-bottom: -1px;
+  }
+  .ui-date-list .list .active {
+    border-bottom: 1px solid #fff;
+    background: #fff;
+  }
+  .ui-date-list .list li .tip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #f84980;
+    color: #fff;
+    padding: 0 3px;
+  }
+  .ui-date-list .list li .price {
+    color: #0e83bf;
+    font-weight: bold;
+  }
+  .ui-main .tit-pic {
+    float: right;
+  }
+
+/*splitbar*/
+  .ui-splitbar {
+    height: 6px;
+    margin-top: 16px;
+    background: url(images/split-bg.png);
+  }
+
+/*content*/
+  .ui-content {
+
+  }
+  .ui-content-header {
+    height: 36px;
+    line-height: 36px;
+    padding-right: 18px;
+    background: #26B4D3;
+    color: #fff;
+  }
+  .ui-content-header li {
+    float: left;
+  }
+  .ui-content-header .sort {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 7px;
+  }
+  .ui-content-header .sort .up {
+    border: 5px solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .ui-content-header .sort .down {
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .ui-content-header li.header-air-info {
+    margin-left: 69px;
+    width: 124px;
+  }
+  .ui-content-header li.header-stime {
+    text-align: right;
+    width: 166px;
+  }
+  .ui-content-header li.header-alltime {
+    text-align: center;
+    width: 156px;
+  }
+  .ui-content-header li.header-etime {
+    width: 166px;
+  }
+  .ui-content-header li.header-recommend {
+    width: 91px;
+    text-align: center;
+  }
+  .ui-content-header li.header-min-price {
+    width: 144px;
+    text-align: right;
+  }
+  .ui-content-list {
+    background: #F3FBFD;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .ui-content-list li {
+    display: flex;
+    padding-left: 34px;
+    padding-right: 18px;
+  }
+  .ui-content-list li .company {
+    width: 35px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+  .ui-content-list li .air-info {
+    width: 124px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+  .ui-content-list li:nth-of-type(1) .air-info,
+  .ui-content-list li:nth-of-type(1) .time-line {
+    border-bottom: 1px dotted #ccc;
+  }
+  .ui-content-list .time-line {
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+  .ui-content-list .time-line .left {
+    width: 166px;
+    text-align: right;
+  }
+  .ui-content-list .time-line .center {
+    width: 156px;
+    text-align: center;
+  }
+  .ui-content-list .time-line .right {
+    width: 166px;
+    text-align: left;
+  }
+  .ui-content-list .time {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .ui-content-list li .time-line .flyline {
+    display: flex;
+    justify-content: center;
+  }
+  .ui-content-list li .time-line .time-detail {
+    display: flex;
+  }
+  .ui-content-list li .time-line .airport-detail {
+    display: flex;
+  }
+  .ui-content-list li:nth-child(1) .recommend {
+    padding-top: 49px;
+  }
+  .ui-content-list li .recommend {
+    width: 91px;
+    text-align: center;
+  }
+  .ui-content-list li .recommend .name {
+    color: #0e83bf;
+  }
+  .ui-content-list li .recommend .price {
+    color: #ff7200;
+  }
+  .ui-content-list li:nth-child(1) .min-price {
+    padding-top: 47px;
+  }
+  .ui-content-list li .min-price {
+    width: 144px;
+    text-align: right;
+  }
+  .ui-content-list li .min-price a {
+    display: inline-block;
+    width: 77px;
+    height: 45px;
+    background-image: url(images/order.png);
+    background-size: 100% 100%;
+  }
+  .ui-content-list li .min-price .price {
+    color: #0e83bf;
+  }
+  .ui-content-list li .min-price .price .big {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .ui-content-list li .min-price .tax {
+    color: #666;
+  }
