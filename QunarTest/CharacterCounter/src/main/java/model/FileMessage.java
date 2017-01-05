@@ -9,69 +9,70 @@ import java.util.Map;
  */
 public class FileMessage {
 
-    private int enCount;
-    private int numCount;
-    private int chCount;
-    private int charCount;
+    private Integer enCount;
+    private Integer numCount;
+    private Integer chCount;
+    private Integer charCount;
 
-    private List<String> topCh;
-    private List<Integer> topCount;
+    private String str;
+
+    private List<ChMax> chMaxes;
 
     public FileMessage() {
     }
 
-    public FileMessage(int enCount, int numCount, int chCount, int charCount ) {
+    public FileMessage(Integer enCount, Integer numCount, Integer chCount, Integer charCount ) {
         this.enCount = enCount;
         this.numCount = numCount;
         this.chCount = chCount;
         this.charCount = charCount;
     }
 
-    public int getEnCount() {
+    public String getStr() {
+        return str;
+    }
+
+    public void setStr(String str) {
+        this.str = str;
+    }
+
+    public Integer getEnCount() {
         return enCount;
     }
 
-    public void setEnCount(int enCount) {
+    public void setEnCount(Integer enCount) {
         this.enCount = enCount;
     }
 
-    public int getNumCount() {
+    public Integer getNumCount() {
         return numCount;
     }
 
-    public void setNumCount(int numCount) {
+    public void setNumCount(Integer numCount) {
         this.numCount = numCount;
     }
 
-    public int getChCount() {
+    public Integer getChCount() {
         return chCount;
     }
 
-    public void setChCount(int chCount) {
+    public void setChCount(Integer chCount) {
         this.chCount = chCount;
     }
 
-    public int getCharCount() {
+    public Integer getCharCount() {
         return charCount;
     }
 
-    public void setCharCount(int charCount) {
+    public void setCharCount(Integer charCount) {
         this.charCount = charCount;
     }
 
-    public List<String> getTopCh() {
-        return topCh;
+    public List<ChMax> getChMaxes() {
+        return chMaxes;
     }
 
-    public void setTopCh(List<String> topCh) {
-        this.topCh = topCh;
-    }
-
-    public List<Integer> getTopCount() {
-        return topCount;
-    }
-
-    public void setTopCount(List<Integer> topCount) {
-        this.topCount = topCount;
+    public void setChMaxes(List<ChMax> chMaxes) {
+        this.chMaxes = chMaxes;
     }
 }
