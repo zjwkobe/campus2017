@@ -1,0 +1,41 @@
+
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    display: block;
+  }
+
+  .ui-main {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .m-door-list {
+    width: 100%;
+    border-right: 1px solid #dbdbdb;
+    overflow: hidden;
+  }
+  .m-door-list .door-item {
+    width: 160px;
+    float: left;
+    border-left: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .m-door-list .door-item img {
+    width: 480px;
+  }
+  .m-door-list .active {
+    width: 480px;
+  }
