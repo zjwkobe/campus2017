@@ -51,11 +51,7 @@
     padding-right: 15px;
     padding-top: 15px;
     margin-bottom: 15px;
-  }
-  .ui-main .tab-container {
-    height: 32px;
-    margin-bottom: -1px;
-    overflow: hidden;
+    height: 31px;
   }
   .ui-main .tab-list .tab {
     background: #f1f1f1;
