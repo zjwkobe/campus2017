@@ -1,1 +1,0 @@
-scp  /dir1/file usernamet@l-test.dev.cn1  /tmp 

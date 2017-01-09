@@ -5,7 +5,7 @@
 # Created Time: 2016年12月29日 星期四 09时22分30秒
 #=========================================================
 #!/bin/bash
-access_path='/etc/httpd/logs/access_log'
+access_path='/etc/tomcat/logs/access_log'
 if [ -s $access_path ]
    then
       cat $access_path |awk '{print $1}' |sort | uniq -c |sort -k1,1rn|head -10
