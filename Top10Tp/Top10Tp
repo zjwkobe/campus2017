@@ -1,0 +1,26 @@
+#!/bin/bash
+
+read -p "input direction ; " direction
+
+if [ -f res.log ]
+then
+	rm -rf res.log
+fi
+
+if [ -f temp.log ]
+then
+	rm -rf temp.log
+fi
+
+for file in $direction/*_access_log*
+do
+	if [ -f $file ]
+	then
+		awk '{print $1}' $file>>temp.log
+		 
+	fi
+done
+
+cat temp.log | sort | uniq -c | sort -n -r | head -n 10 >> res.log
+rm -rf temp.log
+

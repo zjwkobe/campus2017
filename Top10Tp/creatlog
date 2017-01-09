@@ -1,0 +1,18 @@
+#!/bin/bash
+
+###创建日志文件
+
+####执行命令 sudo bash createIp.sh ######因为$RANDOM 在bash中才能用
+
+for i in $(seq 10)
+do	
+	filename=$RANDOM"_access_log.log"
+	echo $filename
+	for i in $(seq 1000)
+	do
+    		r=$RANDOM;
+    		n=$[$r%200];
+    		echo -e "10.0.0.$n $r">>$filename;
+	done
+done
+
