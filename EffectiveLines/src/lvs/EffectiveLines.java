@@ -35,7 +35,7 @@ public class EffectiveLines {
             String line;
             while (null != (line = br.readLine())) {
                 line = line.trim();
-                if (!line.equals("")) {
+                if (!line.isEmpty()) {
                     if (!line.startsWith("//")) {
                         if (!(line.startsWith("/*") && line.endsWith("*/"))) {
                             effectiveLinesCount++;
