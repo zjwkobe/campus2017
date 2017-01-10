@@ -1,0 +1,104 @@
+html,
+body,
+div,
+header,
+input,
+p{
+    margin: 0;
+    padding: 0;
+    font-family: SimSun;
+    font-size: 14px;
+}
+.wrap{
+    width: 600px;
+    height: 550px;
+    margin: 50px auto;
+    border:1px solid #ccc;
+}
+header{
+    width: 100%;
+    height: 190px;
+    position: relative;
+}
+header p{
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 15px;
+}
+#upload{
+    margin: 20px 0 10px 46px;
+}
+#entry{
+    margin-left: 40px;
+}
+header div.input{
+    margin-left: 46px;
+}
+.file{
+    position: relative;
+    display: inline-block;
+    background: #00CCFE;
+    color: #fff;
+    border: 1px solid #99D3F5;
+    padding: 4px 12px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-top: 15px;
+}
+.file input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+header span{
+    position: absolute;
+    bottom:11px;
+    left:98px;
+}
+.button{
+    width: 82px;
+    height: 30px;
+    background: #00CCFE;
+    color: #fff;
+    border: 1px solid #99D3F5;
+    cursor: pointer;
+    float: right;
+    margin-right:50px;
+    margin-top:15px;
+}
+.input_text{
+    display: none;
+}
+.input_text .button{
+    margin-top: 0;
+    margin-right: 80px;
+}
+.input_text .clear{
+    margin-top: -30px;
+    background: #FF9900;
+    border: 1px solid #FF9900;
+}
+.table{
+    padding-left: 46px;
+}
+.table p{
+    padding-bottom: 10px;
+}
+.table table{
+    border-collapse: collapse;
+}
+.table table td{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border:1px solid #aaa;
+}
+table thead td{
+    font-weight: bold;
+}
+.table_2 p{
+    padding-top: 20px;
+}
