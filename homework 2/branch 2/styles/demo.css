@@ -1,0 +1,41 @@
+html,
+body,
+div,
+ul,
+li{
+    margin:0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.wrap{
+    width: 958px;
+    height: 477px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+.wrap ul{
+    height: 100%;
+}
+.wrap li{
+    float: left;
+    width: 160px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    transition:width 1s;
+}
+.wrap li.li1{
+    width: 475px;
+    background: url(../images/door1.png) no-repeat;
+}
+.wrap li.li2{
+    background: url(../images/door2.png) no-repeat;
+}
+.wrap li.li3{
+    background: url(../images/door3.png) no-repeat;
+}
+.wrap li.li4{
+    background: url(../images/door4.png) no-repeat;
+}
