@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles/demo.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <ul>
+                <li class="record">兑换记录</li>
+                <li>E币明细</li>
+                <li>E币兑换</li>
+            </ul>
+        </header>
+        <div class="main">
+            <div class="head">
+                <ul>
+                    <li class="first">全部</li>
+                    <li>成功</li>
+                    <li>失败</li>
+                </ul>
+                <span>选择日期:</span>
+                <input class="date" type="date"><span> 至 </span><input class="date" type="date">
+                <input class="search" type="button" value="搜索">
+                <input class="reset" type="button" value="重置">
+            </div>
+            <div id="table">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <td class="td1">时间</td>
+                        <td class="td2">商品名称</td>
+                        <td class="td3">数量</td>
+                        <td class="td4">E币</td>
+                        <td class="td5">状态</td>
+                        <td class="td6">信息</td>
+                        <td class="td7">兑换信息</td>
+                        <td class="td8">确认</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="td1">
+                            <p>2014-10-28</p>
+                            <p>15:37:21</p>
+                        </td>
+                        <td class="td2">手机50元话费充值</td>
+                        <td class="td3">1</td>
+                        <td class="td4">190</td>
+                        <td class="td5">兑换失败</td>
+                        <td class="td6">充值失败，E币已退回。充值失败，E币已退回。</td>
+                        <td class="td7">
+                            <input type="button" value="兑换信息">
+                        </td>
+                        <td class="td8"></td>
+                    </tr>
+                    </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <a href="#"><p>首页</p></a><span class="page"> 1 </span><a href="#"><p>末页</p></a>
+                    <span>共一页，跳转到<input type="text">页</span>
+                    <input type="button" value="确定">
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/demo.js"></script>
+</body>
+</html>
