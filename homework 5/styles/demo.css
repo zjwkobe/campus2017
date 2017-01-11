@@ -1,0 +1,289 @@
+html,body,div,h1,ul,li,p{
+    margin: 0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+p{
+    font-family:Simsun;
+}
+.wrap{
+    width: 912px;
+    height: 320px;
+    margin: 100px auto;
+    box-shadow: 0 0 30px #000;
+}
+.air_mg{
+    width: 100%;
+    height: 74px;
+
+}
+.air_left,.air_right{
+    width:47px;
+    height: 74px;
+}
+.air_left{
+    background: url("../img/all.png") no-repeat -17px -100px;
+}
+.air_right{
+    background: url("../img/all.png") no-repeat -65px -100px;
+}
+.air_ul li{
+    float: left;
+    border-right: 1px solid #7DBCDC;
+    border-bottom:1px solid #268FC5;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+.air_ul li p.air_price{
+    font-size: 15px;
+    color:#0E83BF;
+    font-family: Microsoft Yahei;
+}
+.air_ul li p{
+    margin-top: 7px;
+}
+.air_ul li.air_right{
+    border-right: none;
+}
+.air_ul li.air_main{
+    width: 102px;
+    height: 74px;
+    background: #F3FBFD;
+    position: relative;
+}
+.air_ul li.air_main p.special{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: #F84980;
+    color: #fff;
+    margin-top: 0;
+}
+.air_ul li.on{
+    background: #fff;
+}
+.air_ul li.on p{
+    font-weight: bold;
+    color:#0E83BF;
+}
+.hid_line{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: #fff;
+    width: 102px;
+    height: 1px;
+    display: none;
+}
+.air_ul li.air_data{
+    width: 96px;
+    height: 75px;
+    border-right: none;
+    border-bottom: none;
+    background:#67CAE0 url("../img/all.png") -30px -30px;
+    position: relative;
+}
+.air_data p{
+    color:#fff;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}
+.line{
+    width: 100%;
+    height: 4px;
+    background: url("../img/all.png") 0 -242px;
+    margin-top: 14px;
+}
+.shadow{
+    width: 100%;
+    height: 100%;
+    background: url("../img/all.png") 0 -300px;
+}
+.main{
+    position: relative;
+}
+.table{
+    width: 100%;
+    margin-top: 1px;
+}
+.table thead{
+    background: #26B4D3;
+    border:none;
+}
+.table td{
+    color: #fff;
+    text-align: center;
+    height: 35px;
+    font-size: 14px;
+}
+.table td.td1{
+    width: 188px;
+}
+.table td.td2{
+    width: 135px;
+    text-align: right;
+}
+.table td.td3{
+    width: 160px;
+    position: relative;
+}
+.table td.td3 div,.table td.td6 div{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url("../img/all.png") -206px -49px;
+}
+.table td.td3 div{
+    top:35%;
+    right: 22%;
+}
+.table td.td4{
+    width: 197px;
+    text-align: left;
+}
+.table td.td5{
+    width: 125px;
+    text-align: left;
+}
+.table td.td6{
+    padding-left: 10px;
+    text-align: left;
+    position: relative;
+}
+.table td.td6 div{
+    top:35%;
+    right: 29%;
+}
+.table tbody{
+    background: #F3FBFD;
+}
+.table tbody td{
+    color:#000;
+    height: 92px;
+}
+.table tbody td.tb_td1 p{
+    text-align: left;
+    margin-left: 64px;
+    font-size: 13px;
+}
+.air_company{
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+.air_type{
+    color:#666666;
+}
+.air_type span{
+    color:#25B4D2;
+}
+.tb_td1{
+    position: relative;
+}
+.tb_td1 div{
+    width: 25px;
+    height: 20px;
+    top: 18px;
+    left: 33px;
+    position: absolute;
+    background: url("../img/all.png") -269px -42px;
+}
+.table tbody td.tb_td2{
+    text-align: right;
+}
+.up_time,.down_time{
+    margin-top: -10px;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+}
+.location{
+    margin-top: 10px;
+    font-size: 12px;
+    color:#333333;
+}
+.tb_td3 p{
+    font-size: 13px;
+    color:#666;
+}
+.mid_time{
+    margin-bottom: 15px;
+}
+.transfer span,.stop span{
+    color:#fff;
+    background: #26B4D3;
+    margin-right: 2px;
+}
+.stop{
+    margin-left: 5px;
+    margin-bottom: -11px;
+}
+.tb_td4 p{
+    text-align: left;
+}
+.tb_td4 p span{
+    font-family: Simsun;
+    font-weight: 500;
+    font-size: 13px;
+    color:#25B4D2;
+    margin-left: 5px;
+}
+.tb_td5 p,.tb_td6 p{
+    margin-left: 5px;
+    text-align: left;
+    font-family: microsoft YaHei;
+}
+.tb_company{
+    color:#0E83BF;
+    font-size: 12px;
+    margin-top: 38px;
+}
+.tb_td5 p.tb_price{
+    color:#FF7200;
+    margin-left: 14px;
+}
+.tb_td6 p span{
+    font-size: 10px;
+}
+.tb_td6 p{
+    margin-left: -5px;
+    font-size: 22px;
+    color:#0E83BF;
+}
+.tb_price{
+    font-size: 12px;
+    color:#000;
+    margin-left: 5px;
+}
+.tb_td6 p.tax{
+    font-size: 12px;
+    color:#666666;
+    margin-left: 23px;
+}
+.price{
+    margin-top: 46px;
+}
+.tb_td6 div{
+    margin-top: -40px;
+    width: 82px;
+    height: 50px;
+    background: url("../img/all.png") no-repeat -783px -35px;
+    cursor: pointer;
+}
+.contact{
+    width: 220px;
+    height: 20px;
+    background: url("../img/all.png") no-repeat -490px -47px;
+    position: absolute;
+}
+.ct1{
+    left: 32%;
+    top:34%;
+}
+.ct2{
+    left: 32%;
+    top:76%;
+}
