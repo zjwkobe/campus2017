@@ -4,18 +4,17 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Created by lvs on 2017-12-28.
  */
 public class EffectiveLines {
 
-    public static void main(String args[]){
-        if(args.length != 1) {
-            System.err.println("Usage: EffectiveLines <fileInputPath>");
-            System.exit(1);
-        }
-        File file = new File(args[0]);
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String path = sc.nextLine();
+        File file = new File(path);
         if(file.exists() && file.isFile()){
             if(file.getName().endsWith(".java")){
                 System.out.println(countEffectiveLines(file));
