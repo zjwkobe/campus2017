@@ -40,8 +40,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="542" />
-    <option name="y" value="259" />
+    <option name="x" value="564" />
+    <option name="y" value="200" />
     <option name="width" value="1489" />
     <option name="height" value="797" />
   </component>
@@ -154,15 +154,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484377292739</updated>
-      <workItem from="1484377296680" duration="2000" />
+      <workItem from="1484377296680" duration="652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2000" />
+    <option name="totallyTimeSpent" value="652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="542" y="259" width="1489" height="797" extended-state="0" />
+    <frame x="564" y="200" width="1489" height="797" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
