@@ -1,0 +1,2 @@
+#scp命令完成copy
+scp /dir/test.file user@$IP:/tmp/test.file
