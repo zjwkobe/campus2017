@@ -1,0 +1,2 @@
+#ฃก/bin/bash
+cat access_log |cut -d กฎ กฎ -f 1 |sort |uniq -c | sort -nr | awk กฎ{print $0 }กฏ | head -n 10 |less

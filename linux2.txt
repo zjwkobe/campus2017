@@ -1,0 +1,7 @@
+#!/bin/bash
+#cope
+echo -n "Enter your host address"
+read adress
+echo -n "Enter other hostname@IP adress and path"
+read name
+scp $adress $name
