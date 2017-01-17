@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.*;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
@@ -15,12 +16,10 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Need File Path.");
-            System.exit(1);
-        }
-
-        String path = args[0];
+        System.out.println("输入读取文件路径:");
+        Scanner in = new Scanner(System.in);
+        String path = "";
+        path = in.next();
 //        String path = "/home/yeluo/test.java";
         long codeLinesCount = GetEffectiveLinesNum(path);
 
@@ -42,6 +41,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        // 正则表达式判断每行为 注释、代码、空行
         Pattern singleAnnotationLinePattern = Pattern.compile("(//) | (/\\*+(.)*\\*+/)", Pattern.MULTILINE + Pattern.DOTALL);
 //      Pattern mutiAnnotationLinePattern = Pattern.compile("((/\\*+)|(^\\s*\\*)|((^\\s)*\\*+/))+", Pattern.MULTILINE);
         Pattern spaceLinePattern = Pattern.compile("^\\s*$", Pattern.MULTILINE);
@@ -65,6 +65,8 @@ public class Main {
                     totalLines ++;
                 }
             }
+
+            // 有效代码行数为：总行数 - 注释行数 - 空行数
             codeLines = totalLines - spaceLines - annotationLines;
         } catch (IOException e) {
             e.printStackTrace();
