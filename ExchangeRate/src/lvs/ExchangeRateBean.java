@@ -4,17 +4,17 @@ package lvs;
 /**
  * Created by lvs on 2017-1-11.
  */
-public class ExchangeRate {
+public class ExchangeRateBean {
 
     private String date;
     private String usdRate;
     private String eurRate;
     private String hkdRate;
 
-    public ExchangeRate() {
+    public ExchangeRateBean() {
     }
 
-    public ExchangeRate(String date, String usdRate, String eurRate, String hkdRate) {
+    public ExchangeRateBean(String date, String usdRate, String eurRate, String hkdRate) {
         this.date = date;
         this.usdRate = usdRate;
         this.eurRate = eurRate;
