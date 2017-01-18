@@ -1,0 +1,74 @@
+@import "$yo-config/core/reset";
+@import "$yo-config/layout/yo-root";
+@import "$yo-config/layout/yo-flex";
+
+.detail {
+    background-color: #fff;
+}
+.detail-photo {
+    height: 110px;
+    position: relative;
+    background: {
+        size: cover;
+        position: center;
+        image: url(../../../src/image/bgimg/4.jpg);
+    }
+}
+.photo-count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 41px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    background: {
+        color: rgba(0,0,0,.5);
+    }
+}
+.detail-list {
+    border-bottom: 1px solid #ccc;
+    li {
+        margin: 0 10px;
+        border-bottom: 1px dotted #ccc;
+        position: relative;
+    }
+    .single-line {
+        padding: 8px 0;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .double-line {
+        padding: 6px 0;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+.average {
+    font-size: 16px;
+    color: #25a4bb;
+    font-weight: bold;
+}
+.right-content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #25a4bb;
+    .yo-ico {
+        font-size: 14px;
+        color: #9a9a9a;
+        font-weight: bold;
+        line-height: 16px;
+        vertical-align: text-top;
+        margin-left: 4px;
+    }
+}
+.around {
+    font-size: 10px;
+    color: #b2b2b2;
+}

@@ -1,0 +1,40 @@
+@import "../../lib/core/reset";
+$base-font: Microsoft Yahei,
+Helvetica,
+Arial;
+body {
+    font-family: $base-font;
+    min-width: 980px;
+}
+
+.btn {
+    width: 163px;
+    height: 37px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    line-height: 31px;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+    -webkit-appearance: none;
+    text-align: center;
+    background: {
+        color: transparent;
+        repeat: no-repeat;
+        size: contain;
+    }
+}
+
+.btn-disable {
+    background-image: url(../image/button-disable.png);
+}
+
+.btn-normal {
+    background-image: url(../image/button.png);
+    &:hover {
+        background-image: url(../image/button-active.png);
+    }
+}

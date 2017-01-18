@@ -1,0 +1,23 @@
+@import "$yo-config/core/reset";
+@import "$yo-config/layout/yo-root";
+@import "$yo-config/layout/yo-flex";
+
+.info {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    h3 {
+        position: relative;
+        height: 46px;
+        padding: 0 10px;
+        line-height: 46px;
+        font-weight: normal;
+        img {
+            margin-right: 8px;
+        }
+    }
+    .right-content {
+        right: 10px;
+    }
+}

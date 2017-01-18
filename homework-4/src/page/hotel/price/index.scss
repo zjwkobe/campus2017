@@ -1,0 +1,14 @@
+@import "$yo-config/core/reset";
+@import "$yo-config/layout/yo-root";
+@import "$yo-config/layout/yo-flex";
+
+.more-price {
+    line-height: 40px;
+    background-color: #f3f3f3;
+    text-align: center;
+    color: #25a4bb;
+    border-bottom: 1px solid #ccc;
+}
+.price-compare {
+    margin-bottom: 15px;
+}

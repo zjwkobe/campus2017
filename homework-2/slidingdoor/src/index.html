@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>滑动门</title>
+	<link rel="stylesheet" href="style/style.css">
+	<style>
+		body {
+			font-family: Microsoft Yahei;
+		}
+		h1 {
+			text-align: center;
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: bold;
+			font-style: italic;
+			width: 800px;
+			margin: 24px auto;
+		}
+		.code {
+			background-color: #2d2d2d;
+			color: #fff;
+			font-family: inherit;
+			font-size: 14px;
+			padding: 24px;
+			max-width: 800px;
+			overflow-x: auto;
+			margin: 0 auto;
+		}
+		.comment {
+			font-style: italic;
+			color: #747369;
+		}
+		.keyword-0 {
+			color: #c9c;
+		}
+		.keyword-1 {
+			color: #f99157;
+		}
+		.method {
+			color: #69c;
+		}
+		.quote {
+			color: #9c9;
+		}
+		.variable {
+			color: #f2777a;
+		}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<h1>滑动门</h1>
+		<div id="sliding-door-container" class="sliding-door-container"></div>
+		<p class="example">
+			<h2>CSS</h2>
+			<pre id="code-css" class="code">
+.sliding-door-container {
+	width: 925px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+			</pre>
+			<h2>JavaScript</h2>
+			<pre id="code-js" class="code">
+// 使用示例
+
+// 图片URL数组
+let imgArray = ['image/door1.png', 'image/door2.png', 'image/door3.png', 'image/door4.png']
+
+// 构造配置
+let config = {
+	mountElement: document.querySelector('#sliding-door-container'), // 挂载元素
+	imgArray: imgArray,
+	containerWidth: 925, // 容器宽度
+	imgWidth: 475, // 图片宽度
+	imgHeight: 477, // 图片高度
+	duration: 1000, // 动画持续时间
+	easingFunction: 'easeInOut', // 缓动函数
+	initailImg: 3 // 初始显示图片索引
+}
+
+// 新建实例
+new SlidingDoor(config)
+			</pre>
+		</p>
+	</div>
+	<script src="script/index.js"></script>
+	<script>
+		function replace(code, config) {
+			config.forEach(function(config) {
+				code = code.replace(config.reg, config.replacement)
+			})
+
+			return code
+		}
+
+		function generateSpan(className, text) {
+			var span = document.createElement('span')
+			span.classList.add(className)
+			span.innerText = text
+
+			return span.outerHTML
+		}
+
+		function highlightJS() {
+			var code = document.querySelector('#code-js').innerText
+			var config = [{
+				reg: /var|function|return|this|new|throw|true|false|typeof/gm,
+				replacement: function(match) {
+					return generateSpan('keyword-0', match)
+				}
+			}, {
+				reg: /\'.+\'|\w+(?=\:)/gm,
+				replacement: function(match) {
+					return generateSpan('quote', match)
+				}
+			}, {
+				reg: /true|false/gm,
+				replacement: function(match) {
+					return generateSpan('keyword-1', match)
+				}
+			}, {
+				reg: /\.\w+\b/gm,
+				replacement: function(match) {
+					return generateSpan('method', match)
+				}
+			}, {
+				reg: /\/\/.*|\/\*.*([\n].*)*\*\//gm,
+				replacement: function(match) {
+					return generateSpan('comment', match)
+				}
+			}]
+
+			code = replace(code, config)
+
+			code.match(/\w+(?=\s\=)/gm).forEach(function(variable) {
+				code = replace(code, [{
+					reg: new RegExp('\\b' + variable + '(?=[\\,\\s\\.\\(\\)\\<])', 'gm'),
+					replacement: function(match) {
+						return generateSpan('variable', match)
+					}
+				}])
+			})
+
+			document.querySelector('#code-js').innerHTML = code
+		}
+
+		function highlightCSS() {
+			var code = document.querySelector('#code-css').innerText
+			var config = [{
+				reg: /^\w+(?=[\s\{])/gm,
+				replacement: function(match) {
+					return generateSpan('variable', match)
+				}
+			}, {
+				reg: /^\.[\w\-]+(?=[\s\{\:])/gm,
+				replacement: function(match) {
+					return generateSpan('keyword-1', match)
+				}
+			}, {
+				reg: /(?:\:[\s]*).+(?=\;)/gm,
+				replacement: function(match) {
+					return generateSpan('keyword-1', match)
+				}
+			}, {
+				reg: /\'.+\'|\w+(?=\:)/gm,
+				replacement: function(match) {
+					return generateSpan('quote', match)
+				}
+			}, {
+				reg: /\/\*.*\*\//gm,
+				replacement: function(match) {
+					return generateSpan('comment', match)
+				}
+			}]
+
+			code = replace(code, config)
+
+			document.querySelector('#code-css').innerHTML = code
+		}
+
+		highlightJS()
+		highlightCSS()
+	</script>
+</body>
+</html>

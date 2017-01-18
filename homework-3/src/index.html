@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>Grid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="table-body">
+        <div class="tag-container">
+            <ul class="tag">
+                <li>E币兑换</li>
+                <li>E币明细</li>
+                <li class="tag-current">兑换记录</li>
+            </ul>
+        </div>
+        <div class="tool-container">
+            <ul class="status-tool">
+                <li class="status-current">全部</li>
+                <li>成功</li>
+                <li>失败</li>
+            </ul>
+            <div class="date-tool">
+                <span>选择日期：</span>
+                <input type="text" name="start-date" value="">
+                <span>至</span>
+                <input type="text" name="end-date" value="">
+                <button class="btn btn-normal" type="button">搜索</button>
+                <button class="btn btn-warn" type="button">重置</button>
+            </div>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th-time">时间</th>
+                        <th class="th-name">商品名称</th>
+                        <th class="th-count">数量</th>
+                        <th class="th-E">E币</th>
+                        <th class="th-status">状态</th>
+                        <th class="th-info">信息</th>
+                        <th class="th-exchange-info">兑换信息</th>
+                        <th class="th-confirm">确认</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="th-time">
+                            <span>2014-10-28</span>
+                            <span>15:37:44</span>
+                        </td>
+                        <td class="th-name">手机50元话费重置</td>
+                        <td class="th-count">1</td>
+                        <td class="th-E">190</td>
+                        <td class="th-status">兑换失败</td>
+                        <td class="th-info">充值失败，E币已退回。</td>
+                        <td class="th-exchange-info">
+                            <button class="btn btn-normal">兑换信息</button>
+                        </td>
+                        <td class="confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="th-time">
+                            <span>2014-10-28</span>
+                            <span>15:37:44</span>
+                        </td>
+                        <td class="th-name">手机50元话费重置</td>
+                        <td class="th-count">1</td>
+                        <td class="th-E">190</td>
+                        <td class="th-status">兑换失败</td>
+                        <td class="th-info">充值失败，E币已退回。</td>
+                        <td class="th-exchange-info">
+                            <button class="btn btn-normal">兑换信息</button>
+                        </td>
+                        <td class="confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="th-time">
+                            <span>2014-10-28</span>
+                            <span>15:37:44</span>
+                        </td>
+                        <td class="th-name">手机50元话费重置</td>
+                        <td class="th-count">1</td>
+                        <td class="th-E">190</td>
+                        <td class="th-status">兑换失败</td>
+                        <td class="th-info">充值失败，E币已退回。</td>
+                        <td class="th-exchange-info">
+                            <button class="btn btn-normal">兑换信息</button>
+                        </td>
+                        <td class="confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="th-time">
+                            <span>2014-10-28</span>
+                            <span>15:37:44</span>
+                        </td>
+                        <td class="th-name">手机50元话费重置</td>
+                        <td class="th-count">1</td>
+                        <td class="th-E">190</td>
+                        <td class="th-status">兑换失败</td>
+                        <td class="th-info">充值失败，E币已退回。</td>
+                        <td class="th-exchange-info">
+                            <button class="btn btn-normal">兑换信息</button>
+                        </td>
+                        <td class="confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="th-time">
+                            <span>2014-10-28</span>
+                            <span>15:37:44</span>
+                        </td>
+                        <td class="th-name">手机50元话费重置</td>
+                        <td class="th-count">1</td>
+                        <td class="th-E">190</td>
+                        <td class="th-status">兑换失败</td>
+                        <td class="th-info">充值失败，E币已退回。</td>
+                        <td class="th-exchange-info">
+                            <button class="btn btn-normal">兑换信息</button>
+                        </td>
+                        <td class="confirm"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-page-container">
+                <div class="table-page">
+                    <ul class="pages">
+                        <li class="named-page">首页</li>
+                        <li class="page-current">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li class="named-page">末页</li>
+                    </ul>
+                    <div class="pages-total">
+                        <span>共1页，跳转到</span>
+                        <input type="text">
+                        <span>页</span>
+                        <button class="btn btn-small">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

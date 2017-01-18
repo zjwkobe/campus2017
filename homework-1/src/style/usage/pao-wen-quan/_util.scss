@@ -1,0 +1,27 @@
+@mixin link-style(
+		$normal,
+		$hover: $normal,
+		$visited: $normal,
+		$active: $normal,
+		$textDecoration: none,
+		$hoverTextDecoration: $textDecoration,
+		$visitedTextDecoration: $textDecoration,
+		$activeTextDecoration: $textDecoration
+	) {
+	&:link {
+		color: $normal;
+		text-decoration: $textDecoration;
+	}
+	&:hover {
+		color: $hover;
+		text-decoration: $hoverTextDecoration;
+	}
+	&:visited {
+		color: $visited;
+		text-decoration: $visitedTextDecoration;
+	}
+	&:active {
+		color: $active;
+		text-decoration: $activeTextDecoration;
+	}
+}

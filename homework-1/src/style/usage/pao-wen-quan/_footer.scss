@@ -1,0 +1,134 @@
+.footer-container {
+    padding-bottom: 80px;
+    background-color: #7ecef4;
+}
+.preserve-banner,
+.footer {
+    width: 980px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.preserve-banner {
+    font-size: 12px;
+    h5 {
+        padding-top: 18px;
+        color: #898989;
+        line-height: 23px;
+        text-align: center;
+    }
+}
+.banner-list {
+    overflow: hidden;
+    li {
+        float: left;
+        width: 480px;
+        height: 59px;
+        color: #555;
+        line-height: 59px;
+        text-align: center;
+        background-color: #ebebeb;
+        margin-top: 18px;
+        &:nth-child(even) {
+            margin-left: 20px;
+        }
+    }
+}
+.footer {
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 30px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #848484;
+    text-align: center;
+    p {
+        line-height: 2;
+    }
+    a {
+        @include link-style( $normal: #848484, $hoverTextDecoration: underline);
+    }
+}
+.licenses {
+    margin-top: 16px;
+    padding-bottom: 44px;
+}
+.QR-code-container {
+    position: fixed;
+    top: 240px;
+    left: 0;
+    width: 162px;
+    height: 180px;
+    background-color: #ed5172;
+    h5 {
+        color: #fff;
+        font-size: 12px;
+        font-family: Sim Sun;
+        text-align: center;
+        line-height: 26px;
+    }
+    &:after {
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        width: 162px;
+        height: 8px;
+        content: '\020';
+        background-color: #9d0035;
+    }
+}
+.QR-code {
+    width: 144px;
+    height: 144px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.float-nav-container {
+    position: fixed;
+    width: 214px;
+    top: 240px;
+    right: 0;
+    color: #fff;
+}
+.float-nav-header {
+    width: 214px;
+    height: 119px;
+    background: {
+        image: url(../bgimg/float-nav-header.png);
+        repeat: no-repeat;
+        position: 1px center;
+        size: contain;
+    }
+}
+.float-nav {
+    width: 130px;
+    margin: 0 auto;
+    background-color: #78af24;
+    padding-bottom: 15px;
+    li {
+        width: 86px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 33px;
+        border-radius: 16.5px;
+        cursor: pointer;
+        &:hover {
+            background-color: #a7de55;
+            color: #336d00;
+        }
+    }
+}
+.back-to-top {
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    line-height: 38px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: {
+        image: url(../bgimg/float-bottom-bg.png);
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+    }
+}

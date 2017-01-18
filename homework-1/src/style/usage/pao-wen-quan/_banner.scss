@@ -1,0 +1,95 @@
+.banner-container {
+    width: 100%;
+    height: 670px;
+    margin: 0 auto;
+    background: {
+        image: url(../bgimg/banner-bg.png);
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+}
+.stage-container {
+    position: relative;
+    top: 475px;
+    width: 980px;
+    height: 153px;
+    margin: 0 auto;
+}
+.stage-indicator {
+    position: absolute;
+    bottom: 100px;
+    left: -9999px;
+    width: 39px;
+    height: 19px;
+    z-index: 1;
+    background: {
+        image: url(../bgimg/arrow.png);
+        position: center;
+        size: 39px 19px;
+    }
+}
+.stage-indicator-1 {
+    left: 144px;
+}
+.stage-indicator-2 {
+    left: 459px;
+}
+.stage-indicator-3 {
+    left: 777px;
+}
+.stage-item {
+    position: relative;
+    float: left;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    background: {
+        size: cover;
+        position: center bottom;
+    }
+}
+.stage-label {
+    margin-top: 50px;
+    text-shadow: 0 -1px 4px rgba(0, 0, 0, .25);
+    .stage-label-time {
+        font-family: Arial;
+        font-size: 32px;
+    }
+}
+.stage-item-1 {
+    width: 332px;
+    height: 149px;
+    margin-top: 4px;
+    background: {
+        image: url(../image/stage-1-active.png);
+    }
+}
+.stage-item-1-overdue {
+    background-image: url(../image/stage-1.png);
+}
+.stage-item-2 {
+    width: 331px;
+    height: 153px;
+    margin-left: -15px;
+    background: {
+        image: url(../image/stage-2-active.png);
+    }
+}
+.stage-item-2-overdue {
+    background-image: url(../image/stage-2.png);
+}
+.stage-item-3 {
+    width: 357px;
+    height: 148px;
+    margin-top: 5px;
+    margin-left: -25px;
+    background: {
+        image: url(../image/stage-3-active.png);
+    }
+}
+.stage-item-3-overdue {
+    background-image: url(../image/stage-3.png);
+}

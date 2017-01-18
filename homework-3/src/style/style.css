@@ -1,0 +1,269 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,
+img {
+    border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-weight: normal;
+    font-style: normal;
+}
+ol,
+ul {
+    list-style: none;
+}
+caption,
+th {
+    text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+q:before,
+q:after {
+    content: ”;
+}
+abbr,
+acronym {
+    border: 0;
+}
+input {
+    outline: none;
+    border: none;
+}
+.table-body {
+    width: 980px;
+    margin: 0 auto;
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    background-color: #fbfcfd;
+}
+.tag-container {
+    position: relative;
+    width: 100%;
+    height: 33px;
+    border-bottom: 1px solid #dadada;
+}
+.tag {
+    position: absolute;
+    right: 10px;
+    bottom: -1px;
+    width: 258px;
+    height: 30px;
+    z-index: 0;
+}
+.tag li {
+    position: relative;
+    float: left;
+    width: 79px;
+    height: 28px;
+    margin-left: 5px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #dadada;
+    border-radius: 2px 2px 0 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.tag .tag-current {
+    border-bottom-color: #fff;
+    background-color: #fff;
+}
+.tool-container {
+    padding: 10px 10px 21px 10px;
+    overflow: hidden;
+}
+.status-tool {
+    float: left;
+}
+.status-tool li {
+    float: left;
+    width: 66px;
+    height: 26px;
+    color: #3775c0;
+    text-align: center;
+    border-radius: 2px;
+    line-height: 26px;
+}
+.status-tool li:hover {
+    color: #fff;
+    background-color: #3775c0;
+    cursor: pointer;
+}
+.status-tool .status-current {
+    background-color: #3775c0;
+    color: #fff;
+}
+.date-tool {
+    float: left;
+    height: 26px;
+    margin-left: 40px;
+    line-height: 26px;
+}
+.date-tool input {
+    width: 175px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #dadada;
+}
+.btn {
+    width: 66px;
+    height: 26px;
+    line-height: 26px;
+    background-color: #3775c0;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.btn-warn {
+    background-color: #f00;
+}
+.btn-small {
+    width: 44px;
+    height: 24px;
+    border: 1px solid #dadada;
+    line-height: 24px;
+    background-color: #fff;
+    color: #000;
+}
+.table {
+    border: 1px solid #dadada;
+    border-bottom: none;
+    text-indent: 10px;
+}
+.table thead {
+    height: 32px;
+    line-height: 32px;
+    background-color: #f8f8f8;
+}
+.table tr {
+    height: 64px;
+    border-bottom: 1px solid #dadada;
+    line-height: 31.5px;
+}
+.table table td>span {
+    display: inline-block;
+    text-indent: 0;
+}
+.th-time {
+    width: 120px;
+    text-indent: 0;
+    padding-left: 20px;
+}
+.th-name {
+    width: 160px;
+}
+.th-count {
+    width: 70px;
+}
+.th-E {
+    width: 70px;
+}
+.th-status {
+    width: 80px;
+}
+.th-info {
+    width: 250px;
+}
+.th-exchange-info {
+    width: 90px;
+}
+.th-confirm {
+    width: 120px;
+}
+.pages-total {
+    float: left;
+    line-height: 34px;
+    height: 34px;
+}
+.pages-total input {
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+}
+.table-page-container {
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+.table-page {
+    margin-right: 10px;
+    float: right;
+}
+.pages {
+    float: left;
+    height: 24px;
+    padding: 5px 0;
+    line-height: 24px;
+    overflow: hidden;
+}
+.pages li {
+    float: left;
+    width: 33px;
+    height: 26px;
+    line-height: 26px;
+    text-indent: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.pages li:hover {
+    text-decoration: underline;
+}
+.pages .named-page {
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    color: #3775c0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.pages .page-current {
+    color: #f00;
+}

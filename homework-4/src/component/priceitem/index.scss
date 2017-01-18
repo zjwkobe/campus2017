@@ -1,0 +1,121 @@
+.hidden {
+    display: none;
+}
+.compare-list {
+    transition: all .3s ease;
+}
+.remark {
+    color: #999;
+    font-size: 10px;
+}
+.additional-tags {
+    color: #fff;
+}
+.tag-group {
+    background-color: #25a4bb;
+}
+.tag-return {
+    background-color: #f00;
+}
+.tag-cheapest {
+    background-color: #f60;
+}
+.tag-most {
+    color: #f60;
+    border: 1px solid #f60;
+    background-color: #fff;
+    &:before {
+        content: '最';
+        background-color: #f60;
+        color: #fff;
+    }
+}
+.initial-item {
+    background-color: #fff;
+}
+.price-item {
+    position: relative;
+    padding: 16px 10px;
+    border-bottom: 1px solid #ccc;
+    h4 {
+        font-weight: normal;
+    }
+}
+.price-info {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 8px;
+}
+.price-right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    & > div {
+        float: left;
+    }
+    .price-amount {
+        text-align: right;
+    }
+    .remark {
+        div {
+            text-align: right;
+        }
+    }
+}
+.price-amount {
+    font-size: 20px;
+    color: #f60;
+    font-weight: bold;
+    &:before {
+        content: '￥';
+        font-size: 14px;
+    }
+}
+.price-action {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    color: #fff;
+}
+.price-action-compare {
+    background-color: #25a4bb;
+    padding: 0 2px;
+}
+.price-action-order {
+    background-color: #f60;
+}
+.additional-tags {
+    & > span {
+        margin-right: 4px;
+        font-size: 10px;
+    }
+}
+.order-btn {
+    border: 1px solid #f60;
+    border-radius: 4px;
+}
+.order-title {
+    font-size: 20px;
+    line-height: 24px;
+    background-color: #f60;
+    text-align: center;
+}
+.order-remark {
+    background-color: #fff;
+    color: #f60;
+    border-radius: 0 0 4px 4px;
+    font-weight: bold;
+}
+.only-price {
+    line-height: 53px;
+}
+.yo-ico {
+    display: inline-block;
+    transition: all .3s ease;
+}
+.compare-collapse {
+    transform: rotate(180deg);
+}

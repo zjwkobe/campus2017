@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+.vscode/
+homework-4/src/yo-config
+homework-4/src/page/demo
+.happypack/
