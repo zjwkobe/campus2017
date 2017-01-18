@@ -1,0 +1,408 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    font-family: Microsoft Yahei;
+}
+.topBar{
+    width: 785px;
+    height: 24px;
+    margin: 0 auto;
+    background: white;
+    color: #717171;
+    font-size: 10px;
+    line-height: 24px;
+}
+.topBar li{
+    list-style: none;
+    display: inline-block;
+    font-size: 10px;
+   // -webkit-transform:scale(0.9);
+}
+.topLeft li{
+    padding-right: 10px;
+    float: left;
+}
+.topRight li{
+    padding-left: 7px;
+}
+.topBar a{
+    text-decoration: none;
+    color: #717171;
+}
+.topLeft{
+    display: inline-block;
+    float: left;
+}
+.topLeft img{
+    vertical-align: middle;
+}
+.topRight{
+    display: inline-block;
+    float: right;
+}
+
+
+#blue{
+    width: 100px;
+    height:100px;
+    background: blue;
+    display: inline-block;
+    border: 1px solid black;
+}
+#red{
+    width: 100px;
+    height:100px;
+    background: red;
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 0;
+}
+.content{
+    background: #7FCDF2;
+    margin: 0 auto;
+}
+.trapezoid{
+    width: 784px;
+    height: 226px;
+    background: #78AF24;
+    margin: 20px auto 27px;
+    position: relative;
+}
+.trapezoidLeft{
+    display: inline-block;
+    margin: 7px 0 7px 7px;
+    float: left;
+}
+.trapezoidRight{
+    right: 7px;
+    top: 7px;
+    position: absolute;
+
+}
+.bathContent{
+    width: 784px;
+    background: #F3EEDB;
+    margin: 10px auto;
+    border-radius: 7px 7px 0 0;
+    height: 3365px;
+   // overflow: hidden;
+    position: relative;
+}
+.nav{
+    width: 784px;
+    height: 95px;
+    background: #ED5172;
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: 0 6px #9D0035;
+}
+.nav li{
+    position: relative;
+    display: inline-block;
+    width: 67px;
+    height: 100px;
+    /*border: 1px solid black;
+    background: #A6143B;
+    box-shadow: 0 6px #7B0018;*/
+    top:-3px;
+    left:23px;
+    float: left;
+}
+.active{
+    background: #A6143B;
+    box-shadow: 0 6px #7B0018;
+}
+.codeDiv{
+    height: 150px;
+    width: 135px;
+    background: #ED5172;
+    box-shadow: 0 6px #9D0035;
+    position: absolute;
+    left: -155px;
+    top: 130px;
+}
+.codeDiv p{
+    font-size: 10px;
+    color: white;
+    margin: 5px 0 0 2px;
+}
+.twoDimensionalCode{
+    height: 115px;
+    width: 115px;
+    background: white;
+    position: absolute;
+    top:28px;
+    left: 9px;
+}
+.sidebar{
+    position: absolute;
+    left: 810px;
+    top:110px;
+}
+.sidebar li{
+    position: relative;
+    list-style: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    top:-335px;
+    left: 65px;
+}
+.sidebar li:nth-child(4) {
+    background: #A7DE55;
+    width: 55px;
+    height: 20px;
+    border-radius: 10px;
+    left: 51px;
+    padding-left:15px ;
+}
+#backTop a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    top:395px;
+    left: 58px;
+}
+#string{
+    width: 670px;
+    background: white;
+    height: 1px;
+    position: absolute;
+    top:45px;
+    left: 55px;
+    z-index: 10;
+}
+.dot{
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: white;
+    position: absolute;
+    margin-left: 28px;
+    top:46px;
+}
+.specialDot{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    top: 44px;
+}
+.stingTop{
+    font-size: 16px;
+    color: #FBDDE4;
+    font-weight: 400;
+    position: absolute;
+    top:20px;
+    margin-left: 6px;
+
+}
+.stingBottom{
+    font-size: 16px;
+    color: #FBDDE4;
+    font-weight: 400;
+    position: absolute;
+    top:60px;
+    margin-left: 6px;
+}
+.specialTop{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    top:15px
+}
+
+.bathTitle{
+    height: 80px;
+    float: left;
+    line-height: 80px;
+  //  position: relative;
+}
+.bathTitle img{
+    vertical-align: middle;
+    margin:0 5px 17px 17px;
+}
+.bigTitle{
+    font-size: 32px;
+    font-weight: bolder;
+    color: #EC4E70;
+}
+.moreBath .bigTitle{
+    height: 75px;
+    line-height: 75px;
+    margin-left: 20px;
+}
+.bigTitle span{
+    font-weight: 100;
+}
+.smallTitle{
+    font-size: 14px;
+    color: #EC476B;
+}
+.rightTitle{
+    float: right;
+
+}
+.smallRight{
+    font-size: 12px;
+    color: #EC476B;
+    display: inline-block;
+    line-height: 12px;
+    margin: 41px 7px 0 0;
+}
+.bathImg{
+    clear: both;
+}
+.bathImg img{
+    border: 6px solid white;
+    float: left;
+}
+.bigImg{
+    position: relative;
+}
+.smallImg{
+    position: relative;
+    float: left;
+}
+.smallImg img{
+    border: 6px solid white;
+}
+.bigImgFont{
+    color: white;
+    font-size: 12px;
+}
+.smallImgFont{
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    display: inline-block;
+    left: 20px;
+    top:10px;
+}
+.fontBottom{
+    margin-top:150px;
+
+}
+.smallImgTitle{
+    font-size: 16px;
+    font-weight: bold;
+}
+.smallDescribe{
+    line-height: 22px;
+}
+.smallBeforeRmb{
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.smallRmb{
+    font-weight: bold;
+    font-size: 20px;
+}
+.smallTake{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    margin:  -50px 0 0 285px;
+}
+.smallTip{
+    position: absolute;
+    left: 20px;
+    top:10px;
+}
+.fontRight{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+.describe{
+    display: inline-block;
+    width: 200px;
+    line-height: 20px;
+}
+.imgTitle{
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 40px;
+}
+.rmb{
+    font-size: 38px;
+    margin: 20px 0 0 40px;
+
+}
+.rmb span{
+    font-size: 16px;
+}
+.beforeRmb{
+    text-decoration: line-through;
+    margin-left: 55px;
+}
+.take{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 20px  0 0 50px;
+}
+
+.bath1{
+    margin: 0 7px 7px 7px;
+}
+.bath2{
+    margin: 0 0 7px 7px;
+}
+.hotSpringGift{
+    width: 784px;
+    margin:24px auto 0;
+}
+.weiBo{
+    width: 784px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+.weiBo p{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    color: white;
+    margin: 10px 0;
+}
+.weiBo span{
+    font-size: 32px;
+    color: #ED5172;
+}
+.weiBo textarea{
+    margin-left:50px;
+}
+.footer{
+    width: 850px;
+    font-size: 10px;
+    margin: 0 auto;
+    color: #7F7F7F;
+}
+.wait{
+    line-height: 40px;
+    text-align: center;
+}
+.banner{
+    width: 410px;
+    height: 50px;
+    background: #EBEBEB;
+    display: inline-block;
+    margin: 0 10px 20px 0;
+    text-align: center;
+    line-height: 50px;
+}
+.footerInf li{
+    list-style: none;
+    display: inline-block;
+}
+.businessImg{
+    width: 500px;
+    margin: 15px auto;
+}
+.empty{
+    margin-top: 30px;
+    height: 70px;
+    background: #7FCDF2;
+}

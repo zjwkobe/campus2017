@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="headerInf">
+        <div class="headerCut">E币兑换</div>
+        <div class="headerCut">E币明细</div>
+        <div class="headerCut active">兑换记录</div>
+    </div>
+</header>
+
+<section>
+    <div class="btn sectionNav">全部</div>
+    <div class="sectionNav choice">成功</div>
+    <div class="sectionNav choice">失败</div>
+    <div class="sectionNav inputLabel">
+        选择日期：<input type="text"/> 至 <input type="text"/>
+    </div>
+    <div class="btn sectionNav">搜索</div>
+    <div class="btn btnRed sectionNav">重置</div>
+</section>
+
+<section class="content">
+    <nav>
+        <ul>
+            <li class="n1">时间</li>
+            <li class="n2">商品名称</li>
+            <li class="n3">数量</li>
+            <li class="n3">E币</li>
+            <li class="n4">状态</li>
+            <li class="n5">信息</li>
+            <li class="n6">兑换信息</li>
+            <li>确认</li>
+        </ul>
+    </nav>
+
+    <!--  <ul class="information">
+          <li class="n1"><p>2014-10-28</p><p>15:37:21</p></li>
+          <li class="n2 inf">手机50元话费充值</li>
+          <li class="n3 inf">1</li>
+          <li class="n3 inf">190</li>
+          <li class="n4 inf">兑换失败</li>
+          <li class="n5 inf"><span class="test">充值失败，E币返回。</span></li>
+          <li class="n6 inf">兑换信息</li>
+      </ul>-->
+
+</section>
+<footer>
+    <div class="pageInf">
+        <div class="pageBtn">首页</div>
+        <span class="pageNumber">1</span>
+        <div class="pageBtn">末页</div>
+        <span class="skip">共1页，跳转到 <input type="text"/> 页  </span>
+        <div class="pageBtn sureBtn">确定</div>
+    </div>
+</footer>
+<script src="grid.js"></script>
+</body>
+</html>

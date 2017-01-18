@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+}
+
+header {
+    width: 980px;
+    height: 34px;
+    background: #FBFCFD;
+    border-bottom: 1px solid #DADADA;
+    margin: 10px auto;
+}
+
+.headerInf {
+    float: right;
+    margin-right: 10px;
+}
+
+.headerCut {
+    display: inline-block;
+    width: 79px;
+    height: 28px;
+    background: #F1F1F1;
+    font-size: 12px;
+    /*-webkit-transform-origin-x: 0;
+    -webkit-transform:scale(0.98);*/
+    line-height: 28px;
+    border: 1px solid #DADADA;
+    margin: 5px 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    border-radius: 3px 3px 0 0;
+}
+
+.active {
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+section {
+    width: 960px;
+    margin: 10px auto 0;
+}
+
+.sectionNav {
+    display: inline-block;
+    color: #333333;
+}
+
+.btn {
+    width: 66px;
+    line-height: 26px;
+    color: white;
+    text-align: center;
+    background: #3775C0;
+    border-radius: 4px;
+}
+
+.btnRed {
+    background: #FF0000;
+}
+
+input {
+    height: 26px;
+    width: 175px;
+    border: 1px solid #CCCCCC;
+}
+
+.choice {
+    color: #0069CA;
+    padding: 0 20px;
+}
+
+.inputLabel {
+    padding-left: 17px;
+}
+
+.content {
+    border: 1px solid #E5E5E5;
+    color: #333333;
+}
+
+nav {
+    background: #F8F8F8;
+    height: 32px;
+    line-height: 32px;
+}
+
+li {
+    list-style: none;
+    float: left;
+}
+
+.n1 {
+    width: 120px;
+    padding-left: 10px;
+}
+
+.n2 {
+    width: 160px;
+}
+
+.n3 {
+    width: 70px;
+}
+
+.n4 {
+    width: 77px;
+}
+
+.n5 {
+    width: 225px;
+    padding-right: 25px;
+}
+
+.n6 {
+    width: 90px;
+}
+
+.information {
+    height: 64px;
+    border-bottom: 1px solid #F3F3F3;
+}
+
+.information .n1 {
+    line-height: 32px;
+}
+
+.information .inf {
+    line-height: 64px;
+}
+
+.information .n5 {
+    height: 64px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.information .n6 {
+    color: white;
+    width: 70px;
+    margin-top: 20px;
+    background: #3775C0;
+    border-radius: 4px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.test {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+}
+
+footer {
+    width: 950px;
+    height: 24px;
+    margin: 0 auto 20px;
+    line-height: 24px;
+    border: 1px solid #E5E5E5;
+    text-align: center;
+    background: #F8F8F8;
+    padding: 5px 10px 5px 0;
+}
+
+.pageInf {
+    float: right;
+}
+
+.pageBtn {
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    color: #0069CA;
+    background: white;
+    border: 1px solid #E5E5E5;
+}
+
+.pageNumber {
+    float: left;
+    color: red;
+    padding: 0 15px;
+}
+
+.skip {
+    float: left;
+}
+
+.skip input {
+    width: 40px;
+    height: 24px;
+}
+
+.sureBtn {
+    margin-left: 5px;
+    color: black;
+    background: #F8F8F8;
+    border-radius: 4px;
+}

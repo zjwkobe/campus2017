@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#box {
+    margin: 0 auto;
+    width: 950px;
+    height: 476px;
+    overflow: hidden;
+    border: 1px solid #CFCFCF;
+    position: relative;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+img {
+    top: 0;
+    border: 1px solid #CFCFCF;
+    position: absolute;
+}

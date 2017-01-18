@@ -1,0 +1,401 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.flyContent {
+    width: 912px;
+    height: 310px;
+    text-align: center;
+    margin: 50px auto;
+
+}
+
+header {
+    width: 912px;
+    height: 76px;
+}
+
+header ul li {
+    width: 102px;
+    height: 75px;
+    list-style: none;
+    border-left: 1px #7DBCDC solid;
+    border-bottom: 1px #268FC5 solid;
+    float: left;
+    line-height: 102px;
+    position: relative;
+    background: #F3FBFD;
+}
+
+li a {
+    text-decoration: none;
+    width: 102px;
+    margin-top: 8px;
+}
+
+li a p {
+    width: 102px;
+
+    color: #333333;
+    line-height: 20px;
+}
+
+.active {
+    background: white;
+    border-top: 1px #268FC5 solid;
+    border-bottom: none;
+}
+
+.price {
+    color: #0E83BF;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.lowPrice {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: #f84980;
+    color: white;
+}
+
+header a {
+    width: 47px;
+    height: 75px;
+    float: left;
+    line-height: 75px;
+}
+
+.arrows {
+    width: 20px;
+    height: 37px;
+    vertical-align: middle;
+}
+
+#left {
+    border-bottom: 1px #268FC5 solid;
+}
+
+#right {
+    border-left: 1px #7DBCDC solid;
+    border-bottom: 1px #268FC5 solid;
+}
+
+#dataPaper {
+    width: 96px;
+    height: 76px;
+    background: #67CAE0;
+    float: left;
+    position: relative;
+}
+
+#dataPaper img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+#dataPaper p {
+
+    color: white;
+    line-height: 20px;
+    margin: 54px 4px 0 0;
+    text-align: right;
+}
+
+#processBar {
+    width: 912px;
+    height: 20px;
+}
+
+#processBar img {
+    margin-top: 15px;
+    height: 5px;
+    width: 912px;
+}
+
+.navigationBar {
+    width: 912px;
+    height: 37px;
+    background: #26B4D3;
+}
+
+.navigationBar li {
+    list-style: none;
+    text-align: right;
+    font-size: 14px;
+    line-height: 37px;
+    color: white;
+    display: inline-block;
+    float: left;
+}
+
+#airInf {
+    width: 125px;
+}
+
+#upTime {
+    width: 200px;
+}
+
+#sumTime {
+    width: 126px;
+}
+#sumTime a{
+    color: white;
+}
+#lowPrice a{
+    color: white;
+}
+#sumTime img {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+#downTime {
+    width: 120px;
+}
+
+#commendWebsite {
+    width: 170px;
+}
+
+#lowPrice {
+    width: 135px;
+    margin-right: 27px;
+}
+#lowPrice img {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.flyList {
+    width: 912px;
+    height: 180px;
+    background: #F3FBFD;
+    border: 1px #F3FBFD solid;
+}
+
+.flyItem {
+    width: 912px;
+    height: 150px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.flyInf {
+    width: 743px;
+    height: 150px;
+    position: relative;
+
+    line-height: 20px;
+    float: left;
+}
+
+.outInf {
+    width: 745px;
+    height: 70px;
+}
+
+.returnInf {
+    width: 745px;
+    height: 70px;
+}
+
+.flyLogo {
+    width: 68px;
+    position: relative;
+    height: 60px;
+    float: left;
+}
+
+.flyLogo img {
+    left: 35px;
+    position: absolute;
+}
+
+.flyName {
+    width: 115px;
+    height: 60px;
+    left: 65px;
+    text-align: left;
+    float: left;
+    display: block;
+}
+
+.flyNum {
+    color: #666666;
+    line-height: 15px;
+}
+
+.flyNum span {
+    font-size: 13px;
+    color: #25B4D2;
+}
+
+#haveBottom {
+    width: 80px;
+    border-bottom: 1px #DADDDD dotted;
+}
+
+.splitInf {
+    width: 575px;
+    border-bottom: 1px #DADDDD dotted;
+    margin: 8px 0 5px 65px;
+    clear: both;
+}
+
+.startTime {
+    width: 140px;
+    height: 45px;
+    text-align: right;
+    float: left;
+}
+
+.endTime {
+    width: 140px;
+    height: 45px;
+    text-align: left;
+    float: left;
+}
+
+.time {
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    padding-bottom: 9px;
+}
+
+.time span {
+    color: #25B4D2;
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.timeLocate {
+    width: 162px;
+    height: 65px;
+    float: left;
+    color: #666666;
+    position: relative;
+}
+
+.timeLocate img {
+    position: absolute;
+    padding-top: 2px;
+    left: -28px;
+}
+
+.flyMiddle {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 16px;
+}
+
+.smallSign{
+    position: absolute;
+    left: 30px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: #2DB7D4;
+    color: white;
+    text-align: center;
+}
+
+.ticketType {
+    width: 100px;
+    height: 28px;
+    float: right;
+    line-height: 16px;
+    text-align: right;
+}
+
+.webName {
+    color: #0E83BF;
+}
+
+.webPrice {
+    font-size: 10px;
+    color: #FF7200;
+}
+
+.outInf .ticketType {
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+.returnInf .ticketType {
+    position: absolute;
+    top: 80px;
+    right: 0;
+}
+
+.flyPrice {
+    width: 167px;
+    height: 150px;
+    float: left;
+    position: relative;
+}
+
+.flyPrice .priceTake {
+    width: 145px;
+    height: 91px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.priceTake {
+    text-align: right;
+}
+
+.reb {
+    font-size: 10px;
+    color: #0E83BF;
+}
+
+#rebPrice{
+    font-size: 28px;
+    color: #0E83BF;
+}
+
+.taxes {
+    color: #666666;
+    line-height: 20px;
+}
+
+.ticket {
+    padding: 3px;
+}
+
+.bookTicket{
+    color: white;
+    position: absolute;
+    top: 55px;
+    left: 85px;
+}
+.bookTicket img{
+    padding-top: 10px;
+    padding-left: 7px;
+}

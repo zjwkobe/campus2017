@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.clickBtn {
+    padding-right: 80px;
+    position: absolute;
+    top: 70px;
+    right: 120px;
+
+}
+
+.content li {
+    list-style: none;
+    font-size: 14px;
+    font-family: Arial;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #3399CC;
+}
+
+.shadow {
+    background: black;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#layer {
+    position: absolute;
+}
+
+.close {
+    position: absolute;
+}
+
