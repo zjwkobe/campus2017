@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd  ">
+
+    <!--扩充注解驱动，可以将请求参数绑定到Controller参数-->
+    <mvc:annotation-driven/>
+
+    <!--激活@Required、@Autowired、JSR 250's、@PostConstruct等标注-->
+    <context:annotation-config/>
+
+    <!--DispatcherServlet上下文，把标记了@Controller注解的类转换为bean，而不搜索其他标注的类 -->
+    <context:component-scan base-package="com.qunar.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+
+    <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀：/WEB-INF/jsps/文件夹下的jsp文件 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsps/"/>
+        <property name="suffix" value=".jsp"/>
+
+    </bean>
+
+    <!--静态资源处理-->
+    <mvc:resources mapping="/resources/" location="/resources/"/>
+
+    <!--配置文件上传-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver ">
+        <!--限制文件上传最大限制：200*1024*1024=200M-->
+        <property name="maxUploadSize" value="209715200" />
+        <property name="defaultEncoding" value="UTF-8" />
+        <!-- 启用resolveLazily属性是为了推迟文件解析，以便捕获文件大小异常 -->
+        <property name="resolveLazily" value="true" />
+    </bean>
+
+
+</beans>
