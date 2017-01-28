@@ -1,0 +1,100 @@
+2017-01-19 14:50:56,394 - Using SLF4J as the default logging framework
+2017-01-19 14:50:56,426 - java.nio.Buffer.address: available
+2017-01-19 14:50:56,428 - sun.misc.Unsafe.theUnsafe: available
+2017-01-19 14:50:56,429 - sun.misc.Unsafe.copyMemory: available
+2017-01-19 14:50:56,430 - java.nio.Bits.unaligned: true
+2017-01-19 14:50:56,431 - Platform: Windows
+2017-01-19 14:50:56,432 - Java version: 8
+2017-01-19 14:50:56,432 - -Dio.netty.noUnsafe: false
+2017-01-19 14:50:56,433 - sun.misc.Unsafe: available
+2017-01-19 14:50:56,433 - -Dio.netty.noJavassist: false
+2017-01-19 14:50:56,761 - Javassist: available
+2017-01-19 14:50:56,761 - -Dio.netty.tmpdir: C:\Users\QIAOY~1.YAN\AppData\Local\Temp (java.io.tmpdir)
+2017-01-19 14:50:56,762 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2017-01-19 14:50:56,762 - -Dio.netty.noPreferDirect: false
+2017-01-19 14:50:56,846 - -Dio.netty.initialSeedUniquifier: 0x05c2c866ad450643 (took 40 ms)
+2017-01-19 14:50:57,006 - -Dio.netty.allocator.type: unpooled
+2017-01-19 14:50:57,006 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2017-01-19 14:52:26,863 - Using SLF4J as the default logging framework
+2017-01-19 14:52:26,876 - java.nio.Buffer.address: available
+2017-01-19 14:52:26,877 - sun.misc.Unsafe.theUnsafe: available
+2017-01-19 14:52:26,877 - sun.misc.Unsafe.copyMemory: available
+2017-01-19 14:52:26,877 - java.nio.Bits.unaligned: true
+2017-01-19 14:52:26,878 - Platform: Windows
+2017-01-19 14:52:26,879 - Java version: 8
+2017-01-19 14:52:26,879 - -Dio.netty.noUnsafe: false
+2017-01-19 14:52:26,879 - sun.misc.Unsafe: available
+2017-01-19 14:52:26,880 - -Dio.netty.noJavassist: false
+2017-01-19 14:52:27,083 - Javassist: available
+2017-01-19 14:52:27,084 - -Dio.netty.tmpdir: C:\Users\QIAOY~1.YAN\AppData\Local\Temp (java.io.tmpdir)
+2017-01-19 14:52:27,084 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2017-01-19 14:52:27,084 - -Dio.netty.noPreferDirect: false
+2017-01-19 14:52:27,217 - -Dio.netty.initialSeedUniquifier: 0xaf970564448c735a (took 126 ms)
+2017-01-19 14:52:27,264 - -Dio.netty.allocator.type: unpooled
+2017-01-19 14:52:27,265 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2017-01-19 14:57:54,102 - Using SLF4J as the default logging framework
+2017-01-19 14:57:54,126 - java.nio.Buffer.address: available
+2017-01-19 14:57:54,128 - sun.misc.Unsafe.theUnsafe: available
+2017-01-19 14:57:54,128 - sun.misc.Unsafe.copyMemory: available
+2017-01-19 14:57:54,129 - java.nio.Bits.unaligned: true
+2017-01-19 14:57:54,132 - Platform: Windows
+2017-01-19 14:57:54,135 - Java version: 8
+2017-01-19 14:57:54,135 - -Dio.netty.noUnsafe: false
+2017-01-19 14:57:54,135 - sun.misc.Unsafe: available
+2017-01-19 14:57:54,136 - -Dio.netty.noJavassist: false
+2017-01-19 14:57:54,397 - Javassist: available
+2017-01-19 14:57:54,398 - -Dio.netty.tmpdir: C:\Users\QIAOY~1.YAN\AppData\Local\Temp (java.io.tmpdir)
+2017-01-19 14:57:54,398 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2017-01-19 14:57:54,398 - -Dio.netty.noPreferDirect: false
+2017-01-19 14:57:54,434 - -Dio.netty.initialSeedUniquifier: 0x291b5edf350bbaf1 (took 29 ms)
+2017-01-19 14:57:54,480 - -Dio.netty.allocator.type: unpooled
+2017-01-19 14:57:54,481 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2017-01-19 14:58:19,487 - Using SLF4J as the default logging framework
+2017-01-19 14:58:19,514 - java.nio.Buffer.address: available
+2017-01-19 14:58:19,516 - sun.misc.Unsafe.theUnsafe: available
+2017-01-19 14:58:19,517 - sun.misc.Unsafe.copyMemory: available
+2017-01-19 14:58:19,517 - java.nio.Bits.unaligned: true
+2017-01-19 14:58:19,520 - Platform: Windows
+2017-01-19 14:58:19,520 - Java version: 8
+2017-01-19 14:58:19,521 - -Dio.netty.noUnsafe: false
+2017-01-19 14:58:19,521 - sun.misc.Unsafe: available
+2017-01-19 14:58:19,522 - -Dio.netty.noJavassist: false
+2017-01-19 14:58:19,745 - Javassist: available
+2017-01-19 14:58:19,745 - -Dio.netty.tmpdir: C:\Users\QIAOY~1.YAN\AppData\Local\Temp (java.io.tmpdir)
+2017-01-19 14:58:19,745 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2017-01-19 14:58:19,746 - -Dio.netty.noPreferDirect: false
+2017-01-19 14:58:19,791 - -Dio.netty.initialSeedUniquifier: 0x4d60adeb0b6db0de (took 38 ms)
+2017-01-19 14:58:19,857 - -Dio.netty.allocator.type: unpooled
+2017-01-19 14:58:19,858 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2017-01-19 15:03:43,727 - Using SLF4J as the default logging framework
+2017-01-19 15:03:43,734 - java.nio.Buffer.address: available
+2017-01-19 15:03:43,735 - sun.misc.Unsafe.theUnsafe: available
+2017-01-19 15:03:43,735 - sun.misc.Unsafe.copyMemory: available
+2017-01-19 15:03:43,736 - java.nio.Bits.unaligned: true
+2017-01-19 15:03:43,737 - Platform: Windows
+2017-01-19 15:03:43,738 - Java version: 8
+2017-01-19 15:03:43,738 - -Dio.netty.noUnsafe: false
+2017-01-19 15:03:43,738 - sun.misc.Unsafe: available
+2017-01-19 15:03:43,739 - -Dio.netty.noJavassist: false
+2017-01-19 15:03:43,942 - Javassist: available
+2017-01-19 15:03:43,943 - -Dio.netty.tmpdir: C:\Users\QIAOY~1.YAN\AppData\Local\Temp (java.io.tmpdir)
+2017-01-19 15:03:43,943 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2017-01-19 15:03:43,943 - -Dio.netty.noPreferDirect: false
+2017-01-19 15:03:44,030 - -Dio.netty.initialSeedUniquifier: 0xf9ee74fd1a18e9f3 (took 77 ms)
+2017-01-19 15:03:44,170 - -Dio.netty.allocator.type: unpooled
+2017-01-19 15:03:44,171 - -Dio.netty.threadLocalDirectBufferSize: 65536
+2017-01-19 16:20:51,013 - Using SLF4J as the default logging framework
+2017-01-19 16:20:51,017 - -Dio.netty.eventLoopThreads: 8
+2017-01-19 16:20:51,027 - java.nio.Buffer.address: available
+2017-01-19 16:20:51,028 - sun.misc.Unsafe.theUnsafe: available
+2017-01-19 16:20:51,028 - sun.misc.Unsafe.copyMemory: available
+2017-01-19 16:20:51,029 - java.nio.Bits.unaligned: true
+2017-01-19 16:20:51,029 - Platform: Windows
+2017-01-19 16:20:51,030 - Java version: 8
+2017-01-19 16:20:51,030 - -Dio.netty.noUnsafe: false
+2017-01-19 16:20:51,030 - sun.misc.Unsafe: available
+2017-01-19 16:20:51,031 - -Dio.netty.noJavassist: false
+2017-01-19 16:20:51,292 - Javassist: available
+2017-01-19 16:20:51,296 - -Dio.netty.tmpdir: C:\Users\QIAOY~1.YAN\AppData\Local\Temp (java.io.tmpdir)
+2017-01-19 16:20:51,296 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2017-01-19 16:20:51,296 - -Dio.netty.noPreferDirect: false
