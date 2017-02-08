@@ -1,0 +1,103 @@
+/*--------------------------文件选择---------------------------------*/
+    #body{
+        margin:15px;
+        padding:25px 60px; 
+        border:1px solid #a5a5a5; 
+    }
+    #body .select{
+        /*padding: 15px;*/
+    }
+    #body .select h4{
+        margin-left:-28px;
+        font-weight: 600;
+    }
+    #body .select form label+label{
+        padding-left: 40px;
+    }
+    #body .select .up-in{
+        padding: 10px 0;
+    }
+    .input{
+        display:none;
+        position: relative;
+    }
+    .button1{
+        margin-left: 175px;
+    }
+    #body .select .input .button2{
+        position: absolute;
+        margin-left: 10px;
+    }
+    #body .select .input .button3{
+        position: absolute;
+        top: 44px;
+        margin-left: 10px;
+    }
+    input[type="submit"] ,.button1,.button2{ 
+        width: 75px;
+        height:25px;
+        color: #ffffff;     
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        box-sizing:content-box;
+        border: 1px solid #7ae6ff;
+        display: inline-block;
+        background-color: #00cdff;     
+    }
+    .button3{
+        width: 75px;
+        height:25px;
+        color: #ffffff;     
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        box-sizing:content-box;
+        border: 1px solid #ffd595;
+        display: inline-block;
+        background-color: #ff9900; 
+    }
+    .button3:focus{
+        width: 75px;
+        height:25px;
+        color: #ffffff;     
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        box-sizing:content-box;
+        border: 1px solid #F9EFBF;
+        display: inline-block;
+        background-color: #ff9900; 
+    }
+    input[type="submit"]:focus,.button1:focus,.button2:focus{ 
+        width: 75px;
+        height:25px;
+        color: #ffffff;     
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        box-sizing:content-box;
+        border: 1px solid #C7F1F7;
+        display: inline-block;
+        background-color: #00cdff;     
+    }
+    /*----------------------------------结果--------------------------------*/
+    .result{
+        margin-top:20px;
+    }
+    .result  p{
+        margin: 10px 0;
+    }
+    .result  table{
+
+        text-align: center;
+        border: 2px solid #d1d1d1;
+    }
+    .result .result-max{
+        margin-top:20px; 
+    }
+    td,th{       
+        height: 18px;
+        width: 120px;
+        padding: 2px;
+    }
