@@ -1,80 +1,78 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-
-public class CountMostImportClass {
-    String dirName;
-    HashMap<String, Integer> importClassRecords;
-    public MostImportClass(String dir){
-        this.dirName = dir;
-        importClassRecords = new HashMap<String, Integer>();
-        this.statisticsClazz(new File(this.dirName));
-    }
-
-    public int get(String clazzName){
-        Integer value = importClassRecords.get(clazzName);
-        if(value==null) return 0;
-        return value;
-    }
-    public void processFile(File file){
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            return;
+/**
+ * Created by mumu462 on 2017/1/7.
+ */
+public class Main {
+    public static void main(String arg[]) {
+        File f = new File("D:\\去哪儿\\hello\\src");
+        ArrayList<String> data = new ArrayList<String>();
+        LinkedHashSet<String> datatemp=new LinkedHashSet<String>();
+        ArrayList datacount = new ArrayList();
+        File[] files = f.listFiles();
+        try
+        {
+            getfile(files,data,datacount,datatemp);
         }
-        String line = null;
-        try {
-            while((line = reader.readLine()) != null){
-                line = line.trim();
-                if(line.startsWith("public")||line.startsWith("class")){
-                    break;
-                }
-                if(line.startsWith("import")){
-                    String className = line.substring(6, line.length()-1).trim();
-                    Integer value = importClassRecords.get(className);
-                    if(value==null){
-                        importClassRecords.put(className, 1);
-                    }else{
-                        importClassRecords.put(className, value+1);
+         catch (Exception ex)
+         {
+             ex.printStackTrace();
+          }
+
+        int SIZE=10;
+        if (data.size()<10)
+        {
+            SIZE=data.size();
+        }
+        MinHeapNode[] nodes = new MinHeapNode[SIZE];
+        for (int i = 0; i < SIZE; i++)
+        {
+            MinHeapNode temp = new MinHeapNode(Integer.parseInt(datacount.get(i).toString()), i);
+            nodes[i] = temp;
+        }
+        MinHeap heap = new MinHeap(nodes, SIZE);
+        for (int i = SIZE; i < datacount.size(); i++) {
+            MinHeapNode temp = new MinHeapNode(Integer.parseInt(datacount.get(i).toString()), i);
+            if (heap.Compare(heap.getNode(0), temp) == true) {
+                heap.Pop();
+                heap.Push(temp);
+            }
+        }
+        for (int i = 0; i < SIZE; i++)
+        {
+            int index=heap.getNode(i).getindex();
+            System.out.println(data.get(index));
+        }
+    }
+    public static void getfile(File[] files,ArrayList<String> data,ArrayList datacount,LinkedHashSet<String> datatemp) throws Exception
+    {
+        for (File file : files) {
+            if (file.listFiles() != null) {
+                getfile(file.listFiles(), data, datacount,datatemp);
+            } else {
+                BufferedReader reader = new BufferedReader(new FileReader(file));
+                String line = null;
+                while ((line = reader.readLine()) != null) {
+                    line = line.trim();
+                    if (line.equals("")) {
+                        continue;
+                    }
+                    if (line.contains("import") == false) {
+                        break;
+                    }
+                    if (datatemp.contains(line)) {
+                        int index = data.indexOf(line);
+                        datacount.set(index, Integer.parseInt(String.valueOf(datacount.get(index))) + 1);
+                    } else {
+                        data.add(line);
+                        datatemp.add(line);
+                        datacount.add(1);
                     }
                 }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void statisticsClazz(File file){
-        if(!file.isDirectory()){
-            processFile(file);
-        }else{
-            File [] files = file.listFiles();
-            for(File tmpFile: files){
-                statisticsClazz(tmpFile);
+                reader.close();
             }
         }
-
     }
-
-    public String getMostImportClazzName(){
-        int max = Integer.MIN_VALUE;
-        String clazzName = null;
-        for(Entry item: this.importClassRecords.entrySet()){
-            String key = (String) item.getKey();
-            int value = (Integer)item.getValue();
-            if(value>max){
-                max = value;
-                clazzName = key;
-            }
-        }
-        return clazzName;
-    }
-
-
-
 }
-

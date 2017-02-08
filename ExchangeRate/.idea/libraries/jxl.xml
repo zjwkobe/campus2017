@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jxl">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jxl.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/poi-3.2-FINAL-20081019.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
