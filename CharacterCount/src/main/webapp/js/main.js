@@ -1,4 +1,38 @@
 $(function(){
+
+    $("#cf").click(function () {
+        chooseOne("#cf");
+    });
+    $("#ct").click(function () {
+        chooseOne("#ct");
+    });
+    function chooseOne(id) {
+        if($(id).val()==1){
+            $("#textdiv").css('display','none');
+            $("#filediv").css('display','block');
+        }else{
+            $("#textdiv").css('display','block');
+            $("#filediv").css('display','none');
+        }
+    }
+
+
+    function processData(result){
+        $("#enCount").text(result.enCount);
+        $("#chCount").text(result.chCount);
+        $("#numCount").text(result.numCount);
+        $("#chOtherCount").text(result.chOtherCount);
+        for(var i = 0;i<3;i++){
+            if(i >= result.top3.length){
+                return ;
+            }
+            var top = result.top3[i];
+            var keyid = "#top"+(i+1)+"Key";
+            var valueid = "#top"+(i+1)+"Value";
+            $(keyid).text("\""+top.key+"\"");
+            $(valueid).text(top.value);
+        }
+    }
     $("#btn_submit_text").click(function () {
         var text = $("#text").val();
         if(text.trim() == "请在此输入文本内容" || text.trim() == ""){
@@ -14,16 +48,10 @@ $(function(){
             data:data,
             success:function (result) {
                 var re = eval(result);
-                if(re.status){
-                    var top3 = result.top3;
-                    var s ="";
-                    for(var i=0;i<top3.length;i++){
-                        s = s + "<p>" + top3[i].key +"------" + top3[i].value +"</p>";
-                    }
-                    $("#co").children().remove();
-                    $("#co").append(s);
+                if(re.status==0){
+                   processData(re);
                 }else{
-                    alert("服务器错误！请稍后再试");
+                    alert(re.msg);
                 }
             },
             error:function (e) {
@@ -44,23 +72,15 @@ $(function(){
             contentType: false
         }).done(function(result) {
             var re = eval(result);
-            if(re.status){
-                var top3 = result.top3;
-                var s ="";
-                for(var i=0;i<top3.length;i++){
-                    s = s + "<p>" + top3[i].key +"------" + top3[i].value +"</p>";
-                }
-                $("#co").children().remove();
-                $("#co").append(s);
+            if(re.status==0){
+                processData(re);
             }else{
-                alert("服务器错误！请稍后再试");
+                alert(re.msg);
             }
         }).fail(function(res) {
             alert("请检查你的网络环境");
         });
-
-
     });
 
-    
 });
+

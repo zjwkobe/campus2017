@@ -1,5 +1,6 @@
 package test;
 
+import com.google.common.base.Splitter;
 import com.google.common.collect.Maps;
 import com.qunar.yq.homework.entity.Result;
 import com.qunar.yq.homework.service.TextService;
@@ -53,6 +54,13 @@ public class TestMapUtils {
             System.out.println("TOP:" + result.getTop3());
         }
     }
+
+    @Test
+    public void ttttt(){
+        Map<String, String> abts = Splitter.on(";").trimResults().withKeyValueSeparator("+").split("TEStQWEZXC+DEFAULT;inner.fyselected.booking+A;FLIGHT_HOTLE_CR_TEST+DEFAULT");
+        System.out.println(abts);
+    }
+
 
 
 }

@@ -2,15 +2,14 @@ package com.qunar.yq.homework.service;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-import com.google.common.collect.HashMultiset;
 import com.qunar.yq.homework.entity.CharMap;
 import com.qunar.yq.homework.entity.Result;
 import com.qunar.yq.homework.utils.MapUtils;
 import org.apache.commons.lang.StringUtils;
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.regex.Pattern;
@@ -19,7 +18,7 @@ import java.util.regex.Pattern;
 /**
  * Created by qiaoy.yang on 2016/12/29.
  */
-@Controller
+@Service
 public class TextService {
     private static Logger logger = LoggerFactory.getLogger("TextService");
 
@@ -28,7 +27,7 @@ public class TextService {
 
         if(StringUtils.isBlank(text)){
             re.setStatus(-1);
-            re.setMeg("文本为空！");
+            re.setMsg("文本为空！");
             return  re;
         }
         logger.debug("Request: " + text);

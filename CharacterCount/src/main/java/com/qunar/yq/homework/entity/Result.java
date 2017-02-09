@@ -13,7 +13,7 @@ public class Result {
     private long numCount;
     private long chOtherCount;
     private int status;
-    private String meg;
+    private String msg;
 
     public int getStatus() {
         return status;
@@ -63,11 +63,11 @@ public class Result {
         this.chOtherCount = chOtherCount;
     }
 
-    public String getMeg() {
-        return meg;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMeg(String meg) {
-        this.meg = meg;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }

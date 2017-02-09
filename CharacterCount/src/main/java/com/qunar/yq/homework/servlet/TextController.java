@@ -9,9 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,7 +23,8 @@ import java.io.InputStreamReader;
 public class TextController {
     private static Logger logger = LoggerFactory.getLogger("Result: ");
 
-    private TextService textService = new TextService();
+    @Resource
+    private TextService textService;
 
     /**
      * 处理文本
@@ -67,7 +67,7 @@ public class TextController {
             return s;
         } catch (Exception e) {
             Result result = new Result();
-            result.setMeg("系统错误");
+            result.setMsg("系统错误");
             result.setStatus(-1);
             String s = JSONObject.toJSON(result).toString();
             logger.info(s);
