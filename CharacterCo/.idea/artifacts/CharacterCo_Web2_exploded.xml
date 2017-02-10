@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CharacterCo:Web2 exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CharacterCo_Web2_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CharacterCo/web/Web2" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CharacterCo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.4.RELEASE" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
