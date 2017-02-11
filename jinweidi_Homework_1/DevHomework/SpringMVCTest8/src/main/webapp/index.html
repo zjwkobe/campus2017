@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test index</title>
+    <style type="text/css">
+        th tr td{border:1px #0066ff solid;}
+        td {text-align:center;}
+        tr {height:30px;}
+
+        .div1 {
+            float:left;
+            height:30px;
+            width:100px;
+            background:#ff0000;
+            position:relative;
+        }
+        .div2 {
+            background-color:#ff8c00;
+            height:25px;
+            width:100px;
+            text-align:center;
+            padding-top:5px;
+        }
+        .inputstyle {
+            background-color:#00ff00;
+            width:100px;
+            height:30px;
+            cursor:pointer;
+            filter:alpha;
+            -moz-opacity:0;
+            opacity:0;
+            position:absolute;
+            left:0px;
+            top:0px;"
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function LaunchTextArea() {
+            document.getElementById("WillBeChange").innerHTML="<tr><td rowspan=\"2\"><textarea id=\"aTextArea\" style=\"height:110px;width:360px;\">请在这里输入文字！</textarea></td><td rowspan=\"2\" style=\"width:20px\"></td><td style=\"height:50px;width:100px;padding-top:13px;\"><button type=\"button\" style=\"background-color:#7788dd;height:30px;width:100px\" onclick=\"SendingAndCounting()\" >统计</button></td></tr><tr><td style=\"height:50px;width:100px;padding-bottom:13px;\"><button type=\"button\" style=\"background-color:#7788dd;height:30px;width:100px;\" onclick=\"CleanTextArea()\" >清空内容</button></td></tr>";
+
+            document.getElementById("aTextArea").focus();
+        }
+
+        function LaunchFileUpload() {
+            document.getElementById("WillBeChange").innerHTML="<tr><td style=\"background-color:#ff7766;text-align:left;width:100px;\"><div class=\"div1\" ><div class=\"div2\" id=\"xxxx\" >文件上传</div><input id=\"FileUploader\" type=\"file\" class=\"inputstyle\" onchange=\"UpdateFileName(this.value)\" /></div></td><td style=\"text-align:left;width:280px\"><input id=\"FileName\" type=\"text\" style=\"width:260px;padding-left:3px;background-color:inherit;border-style:none\" /> </td><td style=\"width:100px\"><button type=\"button\" style=\"background-color:#7788dd;height:30px;width:100px\" onclick=\"UploadingAndCounting()\" >统计</button></td></tr>";
+        }
+
+        function CleanTextArea() {
+            document.getElementById("aTextArea").value = "请在这里输入文字！";
+
+            document.getElementById("ENChar").innerHTML = "";
+            document.getElementById("DigitChar").innerHTML = "";
+            document.getElementById("CNChar").innerHTML = "";
+            document.getElementById("XChar").innerHTML = "";
+            document.getElementById("Top1Char").innerHTML = "";
+            document.getElementById("Top2Char").innerHTML = "";
+            document.getElementById("Top3Char").innerHTML = "";
+            document.getElementById("Top1Num").innerHTML = "";
+            document.getElementById("Top2Num").innerHTML = "";
+            document.getElementById("Top3Num").innerHTML = "";
+        }
+
+        function UpdateFileName(fileName) {
+            document.getElementById("FileName").value = fileName;
+        }
+
+        function SendingAndCounting() {
+            var xmlhttp;
+            var str = document.getElementById("aTextArea").value;
+
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.onreadystatechange=function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    var jsonObj = eval("("+xmlhttp.responseText+")");
+                    document.getElementById("ENChar").innerHTML=jsonObj.ENChar;
+                    document.getElementById("DigitChar").innerHTML=jsonObj.DigitChar;
+                    document.getElementById("CNChar").innerHTML=jsonObj.CNChar;
+                    document.getElementById("XChar").innerHTML=jsonObj.XChar;
+                    document.getElementById("Top1Char").innerHTML = jsonObj.Top1Char;
+                    document.getElementById("Top2Char").innerHTML = jsonObj.Top2Char;
+                    document.getElementById("Top3Char").innerHTML = jsonObj.Top3Char;
+                    document.getElementById("Top1Num").innerHTML = jsonObj.Top1Num;
+                    document.getElementById("Top2Num").innerHTML = jsonObj.Top2Num;
+                    document.getElementById("Top3Num").innerHTML = jsonObj.Top3Num;
+                }
+            }
+
+            xmlhttp.open("GET","/charcount?text="+str,true);
+
+            xmlhttp.send();
+        }
+
+        function UploadingAndCounting() {
+            var fileObj = document.getElementById("FileUploader").files[0]; // 获取文件对象
+            var FileController = "/uploadServlet";
+
+            // FormData 对象
+            var form = new FormData();
+            //form.append("author", "hooyes");                        // 可以增加表单数据
+            form.append("file", fileObj);                           // 文件对象
+
+            // XMLHttpRequest 对象
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    var jsonObj = eval("("+xmlhttp.responseText+")");
+                    document.getElementById("ENChar").innerHTML=jsonObj.ENChar;
+                    document.getElementById("DigitChar").innerHTML=jsonObj.DigitChar;
+                    document.getElementById("CNChar").innerHTML=jsonObj.CNChar;
+                    document.getElementById("XChar").innerHTML=jsonObj.XChar;
+                    document.getElementById("Top1Char").innerHTML = jsonObj.Top1Char;
+                    document.getElementById("Top2Char").innerHTML = jsonObj.Top2Char;
+                    document.getElementById("Top3Char").innerHTML = jsonObj.Top3Char;
+                    document.getElementById("Top1Num").innerHTML = jsonObj.Top1Num;
+                    document.getElementById("Top2Num").innerHTML = jsonObj.Top2Num;
+                    document.getElementById("Top3Num").innerHTML = jsonObj.Top3Num;
+                }
+            }
+            xmlhttp.open("post", FileController, true);
+            xmlhttp.send(form);
+        }
+
+    </script>
+</head>
+
+<body style="background-color:#eee9e9;">
+
+<!--
+    问问问问问问问问问问问问问
+    和和和和和和和和和和和和和
+    好好好好好好好好好好好好好
+    领领领领领领领领领领领领领
+    油油油油油油油油油油油油油
+    咪咪咪咪咪咪咪咪咪咪咪
+    哄哄哄哄哄哄哄哄哄哄哄
+    露露露露露露露露露露露
+-->
+
+<table name="forContextCenter" style="background-color:#99ffdd;" align="center">
+    <tbody>
+    <tr>
+        <td>
+
+            <div name="MainBody" style="background-color:#eee9e9;width:600px;padding-top:20px;padding-bottom:20px" align="center">
+
+                <!--                                                align="center" 让 table 自己居于自己所在块的中央 -->
+                <table cellspacing="0" cellpadding="0" border="0px" align="center" style="background-color:#eee9e9;width:500px;">
+                    <tbody>
+
+                    <!-- the first line -->
+                    <tr>
+                        <td colspan="3" style="height:50px;text-align:left;">
+                            请选择一段文字
+                        </td>
+                    </tr>
+
+                    <!-- the 2nd line -->
+                    <tr>
+                        <td style="text-align:left;height:50px;width:150px;">
+                            <input type="radio" name="inputingMethod" value="fileInput"
+                                   checked="checked" onchange="LaunchFileUpload()" />
+                            文件上传
+                        </td>
+                        <td style="text-align:left;width:150px">
+                            <input type="radio" name="inputingMethod" value="textInput" onchange="LaunchTextArea()" />
+                            文本输入
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+
+                    <tr><!-- the 3th line -->
+                        <td colspan="3">
+                                <table cellspacing="0" cellpadding="0" style="border-collapse:collapse" border="0px" style="width:500px;height:100px;">
+                                    <tbody id="WillBeChange" >
+                                    <tr>
+                                        <td style="background-color:#ff7766;text-align:left;width:100px;">
+                                            <div class="div1" >
+                                                <div class="div2" >
+                                                    文件上传
+                                                </div>
+                                                <input id="FileUploader" name="uploadedFile" type="file" class="inputstyle"
+                                                       onchange="UpdateFileName(this.value)" />
+                                            </div>
+                                        </td>
+
+                                        <td style="text-align:left;width:280px;overflow-x:hidden;overflow-y:hidden;">
+                                            <input id="FileName" type="text" style="width:260px;padding-left:3px;background-color:inherit;border-style:none" />
+                                        </td>
+
+                                        <td style="width:100px">
+                                            <button type="button" style="background-color:#ff8c00;height:30px;width:100px" onclick="UploadingAndCounting()" >统计</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                        </td>
+                    </tr>
+
+                    <!-- the 4th line -->
+                    <tr>
+                        <td colspan="3" style="text-align:left;height:50px;padding-top:13px;">
+                            各统计内容的个数如下：
+                        </td>
+                    </tr>
+
+                    <!-- the 5th line -->
+                    <tr>
+                        <td colspan="3">
+                            <table cellspacing="0" cellpadding="0" style="border-collapse:collapse" border="1px" >
+                                <thead>
+                                    <tr>
+                                        <th width="180px" >统计项</th>
+                                        <th width="180px" >个数</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>英文字母</td>
+                                        <td id="ENChar"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>数字</td>
+                                        <td id="DigitChar"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中文汉字</td>
+                                        <td id="CNChar"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中英文标点符号</td>
+                                        <td id="XChar"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- the 6th line -->
+                    <tr>
+                        <td colspan="3" style="text-align:left;width:400px;height:50px;padding-top:13px;">
+                            文字中出现频率最高的三个字是：
+                        </td>
+                    </tr>
+
+                    <!-- the 7th line -->
+                    <tr>
+                        <td colspan="3">
+                            <table cellspacing="0" cellpadding="0" style="border-collapse:collapse" border="1px" >
+                                <thead>
+                                    <tr>
+                                        <th style="width:180px" >名称</th>
+                                        <th style="width:180px" >个数</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="Top1Char"></td>
+                                        <td id="Top1Num"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="Top2Char"></td>
+                                        <td id="Top2Num"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="Top3Char"></td>
+                                        <td id="Top3Num"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
