@@ -1,7 +1,8 @@
-package com.qunar.muhongfen;
+package com.qunar;
 
-import com.qunar.muhongfen.util.CharacterUtil;
-import com.qunar.muhongfen.util.ResponseUtil;
+import com.qunar.util.CharacterUtil;
+import com.qunar.util.ResponseUtil;
+import com.qunar.util.FileUtil;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,11 +16,6 @@ import java.io.*;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
-
-
-import com.qunar.muhongfen.util.FileUtil;
-
-
 
 /**
  * Created by Lvs on 17/2/5.
